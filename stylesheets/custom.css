@@ -2,3 +2,18 @@ h3
 {
 	color: #666;
 }
+
+#main_content_wrap
+{
+	background: transparent url('../images/bg-1.jpg') repeat-y 100% 0;
+
+}
+
+#main_content_wrap .inner
+{
+	background-color: #fff;
+}
+.extra-wrap
+{
+	background: #444;
+}
