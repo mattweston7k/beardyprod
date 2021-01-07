@@ -5,8 +5,8 @@ h3
 
 #main_content_wrap
 {
-	background: transparent url('../images/bg-1.jpg') repeat-y 100% 0;
-
+	/*background: transparent url('../images/bg-1.jpg') repeat-y 100% 0;*/
+	background-color: transparent;
 }
 
 #main_content_wrap .inner
@@ -15,5 +15,15 @@ h3
 }
 .extra-wrap
 {
-	background: #444;
+	background-color: #444;	
+}
+
+section.inner, #main_content
+{
+	/*border-top-left-radius: 40px;
+	padding: 15px 230px 15px 20px;
+	*/
+	border-top-right-radius: 40px;
+	padding: 15px 20px 15px 230px;
+	background: transparent url('../images/bg-1.jpg') repeat-y 0 0;
 }
