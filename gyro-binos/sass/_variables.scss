@@ -1,0 +1,10 @@
+$txt-fonts: Arial, Verdana;
+$image-folder: '../images/';
+$max-width: 800px;
+
+
+@mixin no-indent {
+	margin: 0;
+	padding: 0;
+}
+$txt-medium: 14px;
