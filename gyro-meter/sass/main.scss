@@ -1,0 +1,64 @@
+@import "_variables";
+@import "_grid";
+@import "_layout";
+@import "_meter";
+
+.color-1 {
+	color: #3474b4;
+}
+.color-2 {
+	color: #34b43a;
+}
+.title {
+	font-weight: bold;
+}
+.centered {
+	text-align: center;
+}
+.bg-3d {
+	background-color: #000;
+	position: relative;
+	padding: 20px 0;
+	overflow: hidden;
+	min-height: $fixed-height;
+}
+.scenery {
+	margin: 0 auto;
+	img {		
+		//width: $fixed-width * 2;
+		width: auto;
+		max-width: 100%;
+	}
+}
+.pos-absolute {
+	position: absolute;
+}
+
+.target {	
+	//right: 10%;
+	z-index: 1;
+}
+.scope {
+	position: relative;
+	z-index: 2;
+}
+
+.bearing {
+	color: #34b43a;
+	left: 0;
+	top: 0;
+	font-size: $txt-medium;
+	padding: 2px 10px;
+}
+
+.jq-bearing {
+	border: solid 1px #ccc;
+	padding: 5px;
+	color: #fff;
+	background: #333;
+}
+//--------------------
+
+.jq-chart {
+	
+}

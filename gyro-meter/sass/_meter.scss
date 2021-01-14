@@ -1,0 +1,33 @@
+.jq-chart {
+	
+	.v-line {
+		width: 3px;
+		height: 300px;
+		position: absolute;
+		background-color: $line-color;
+		top: 32px;
+		left: 15px;
+	}
+	.h-line {
+		width: 10px;
+		position: absolute;
+		height: 2px;
+		background-color: $line-color;
+		left: 12px;
+	}
+	.h-line--top {
+		top: 30px;
+	}
+	.h-line--bottom {
+		top: 330px;
+	}
+//28px - 330px range	
+	.measure-line {
+		width: 10px;
+		height: 3px;
+		background-color: #35ae37;
+		position: absolute;
+		top: 160px;
+		left: 12px;
+	}
+}

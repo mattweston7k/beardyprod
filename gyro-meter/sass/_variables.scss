@@ -1,0 +1,13 @@
+$txt-fonts: Arial, Verdana;
+$image-folder: '../images/';
+$max-width: 800px;
+$fixed-height: 300px;
+$fixed-width: 280px;
+$zoom-limit: 150%;
+$line-color: #eee;
+
+@mixin no-indent {
+	margin: 0;
+	padding: 0;
+}
+$txt-medium: 14px;
