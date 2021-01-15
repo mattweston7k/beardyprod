@@ -1,0 +1,3 @@
+http://w3c.github.io/deviceorientation/spec-source-orientation.html
+
+http://mobiforge.com/design-development/html5-mobile-web-device-orientation-events
