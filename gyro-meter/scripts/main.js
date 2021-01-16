@@ -104,9 +104,13 @@ function captureData() {
 		
 			
 			var cval = $('.measure-line').css('top'); //current value
-			var mv = cval.substring(0,cval.length-2); //remove px		
-			$('.measure-line').css('top', Math.round(beta) +'px');
-			
+			var mv = cval.substring(0,cval.length-2); //remove px	
+			if (Math.round(beta) > 150 || Math.round(beta) < -149) {
+				//has reached limit
+			}			
+			else {
+				$('.measure-line').css('top', 180 - Math.round(beta) +'px');
+			}
 			
 			/*
 			if ((Math.round(alpha) > 110)) {
