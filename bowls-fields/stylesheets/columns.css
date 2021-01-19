@@ -1,0 +1,55 @@
+/* line 1, ../sass/columns.scss */
+.wrapper {
+  border: solid 1px #ccc;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 13, ../sass/columns.scss */
+.new-row {
+  border: solid 1px #f00;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+}
+
+/* line 19, ../sass/columns.scss */
+li {
+  position: relative;
+}
+
+/* line 22, ../sass/columns.scss */
+.jq-info {
+  position: absolute;
+  border: solid 1px #0f0;
+  background-color: #eee;
+  padding: 10px;
+  top: 10px;
+  z-index: 9999;
+  opacity: 0.8;
+  left: -50px;
+}
+
+/* line 34, ../sass/columns.scss */
+.second-level-menu {
+  min-height: 400px;
+}
+
+/* line 40, ../sass/columns.scss */
+.wrapper {
+  max-height: 420px;
+  float: left;
+}
+
+/* line 47, ../sass/columns.scss */
+.jq-mod .second-level-menu {
+  -webkit-columns: 200px auto;
+  /* Safari and Chrome */
+  min-width: 600px;
+}
+
+/* line 55, ../sass/columns.scss */
+.module {
+  display: block;
+  float: left;
+}

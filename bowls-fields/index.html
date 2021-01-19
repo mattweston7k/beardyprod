@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Bowls clubs</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="stylesheets/dynamic-content.css" />
+ </head> 
+
+<body>
+
+<div class="section group">
+	<div class="col span_8_of_12">
+<!--
+		<input class="btn--sort" type="button" value="sort by address" />
+		-->
+		<div class="wrapper"> 
+
+			<div class="content page-1 active"></div>	
+		</div>
+		Locations from:<br />
+		http://www.online-bowls.com/greens/greens.php
+	</div>
+	
+	<div class="col span_4_of_12">
+		
+		<div id="map-canvas"></div>
+		<input class="jq-hide" type="button" value="hide" />
+		
+	</div>
+</div>
+
+
+
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>	
+	<!-- dynamic content creation from js array -->
+	<script type="text/javascript" src="scripts/content/bowls.js"></script>
+	<script type="text/javascript" src="scripts/dynamic-content.js"></script>
+ </body>
+ </html>

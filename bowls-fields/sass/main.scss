@@ -1,0 +1,70 @@
+@import "_variables";
+@import "_grid";
+@import "_layout";
+
+/*	[common]	*/
+	.fright {
+		float: right;
+	}
+	.fleft {
+		float: left;		
+	}
+	.no-top-margin {
+		margin-top: 0;
+	}
+	.pos-rel {
+		position: relative;
+	}
+	.pos-abs {
+		position: absolute;
+	}
+/*	[/common]	*/
+
+/*	[form]	*/
+	.btn {
+		background: #ccc;
+		padding: 2px 5px;
+		display: inline-block;
+		color: #333;
+		text-decoration: none;
+		font-weight: bold;	
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	.usr-input {
+		border: solid 1px #999;
+		width: 90%;
+		margin-bottom: 10px;
+	}
+	label {
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	
+	.title {
+		font-weight: bold;
+		font-size: $txt-medium+2;
+	}
+/*	[/form]	*/
+
+	.jq-item {
+		margin-bottom: 15px;
+		border-bottom: solid 1px #ccc;
+	}
+	
+	.toggled {
+		//display: none;
+	}
+	
+	.jq-html {
+		padding: 10px;
+		border: solid 2px #ccc;
+	}
+	
+	.jq-area {
+		border: solid 1px #ccc;
+		width: 95%;
+		min-height: 150px;
+	}
+	
