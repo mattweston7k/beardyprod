@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>gmap + gyroscope</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="stylesheets/dynamic-content.css" />
+ </head> 
+
+<body>
+
+<div class="jq-func toggled">
+	<button class="jq-close">X</button>
+</div>
+
+<div class="jq-gyro toggled">
+	
+</div>
+
+
+
+<div class="section group">
+	<div class="col span_12_of_12">
+		<div id="map-canvas"></div>
+	</div>
+</div>
+
+<div class="section group">
+	<div class="col span_8_of_12">	
+		<div class="wrapper">
+			<!-- content generated via js -->	
+			<div class="content page-3 active"></div>	
+		</div>
+
+	</div>
+	
+	
+	
+		
+	<div class="col span_4_of_12">
+		<input class="jq-hide" type="button" value="hide map" />
+		<input class="jq-show-all" type="button" value="show all markers" />
+	</div>
+</div>
+
+<div class="gyro-data">
+	<div id="dataContainerOrientation"></div>
+	<div class="bearing"></div>
+</div>
+
+
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>	
+	<!-- dynamic content creation from js array -->
+	<script type="text/javascript" src="scripts/content/locations.js"></script>
+	<script type="text/javascript" src="scripts/dynamic-content.js"></script>
+	<script type="text/javascript" src="scripts/gyroscope.js"></script>
+ </body>
+ </html>
