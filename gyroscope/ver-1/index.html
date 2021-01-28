@@ -21,6 +21,10 @@
 			</div>
 			
 			<div class="col span_4_of_12">
+				<!--
+				<b>output:</b>
+				<div class="jq-output"></div>								
+				-->
 				<div id="dataContainerMotion">
 				  No device motion data
 				</div>
@@ -36,40 +40,14 @@
 		<div class="section group">	
 			<div class="col span_12_of_12">
 				<div class="centered bg-3d">
-					<div class="scenery pos-rel">
-						<img src="images/scene-1.jpg" />
-					</div>
-
-					<div class="bearing pos-absolute">val</div>
-					<div class="jq-bearing pos-absolute">val</div>
+					<div class="target pos-absolute"><img src="images/target.png" /></div>
+					<div class="scope"><img src="images/scope.png" /></div>
 					
-					<div class="jq-chart">
-						<div class="v-line"></div>
-						<div class="h-line h-line--top"></div>
-						<div class="h-line h-line--bottom"></div>
-						<div class="measure-line"></div>
-					</div>
-					
+					<div class="bearing pos-absolute">160</div>
 				</div>
 			</div>
 		</div>
 		
-		<div class="jq-meter--btns">
-			<button class="btn-minus" data-amount="-50">meter: -10</button>
-			<button class="btn-plus" data-amount="+50">meter: +10</button>
-		</div>
-		
-		
-		<div class="desktop jq-btns">
-			<button class="btn-down" data-amount="-10">-10</button>
-			<button class="btn-up" data-amount="10">+10</button>
-			<button class="btn-down" data-amount="-50">-50</button>
-			<button class="btn-up" data-amount="50">+50</button>						
-		</div>
-		
-		<div class="jq-zoom">
-			<button class="btn-zoom" data-amount="50">zoom +50</button>
-		</div>
 	</div>
  
  	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->

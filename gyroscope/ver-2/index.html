@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Gyroscope</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="stylesheets/main.css">
+ </head> 
+	
+	<div class="wrap">
+		<div class="section group">					
+			<div class="col span_4_of_12">
+						
+				<div id="dataContainerOrientation">
+				  No device orientation data
+				</div>
+								
+			</div>
+			
+			<div class="col span_4_of_12">
+				<div id="dataContainerMotion">
+				  No device motion data
+				</div>
+			</div>
+			
+			<div class="col span_4_of_12">
+				<div id="dataContainerAcceleration">
+				  No device motion data
+				</div>
+			</div>
+		</div>
+		
+		<div class="section group">	
+			<div class="col span_12_of_12">
+				<div class="centered bg-3d">
+					<div class="scenery pos-rel">
+						<img src="images/scene-1.jpg" />
+					</div>
+
+					<div class="bearing pos-absolute">val</div>
+					<div class="jq-bearing pos-absolute">val</div>
+					
+					<div class="jq-chart">
+						<div class="v-line"></div>
+						<div class="h-line h-line--top"></div>
+						<div class="h-line h-line--bottom"></div>
+						<div class="measure-line"></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	<!--	
+		<div class="jq-meter--btns">
+			<button class="btn-minus" data-amount="-50">meter: -10</button>
+			<button class="btn-plus" data-amount="+50">meter: +10</button>
+		</div>
+		
+		
+		<div class="desktop jq-btns">
+			<button class="btn-down" data-amount="-10">-10</button>
+			<button class="btn-up" data-amount="10">+10</button>
+			<button class="btn-down" data-amount="-50">-50</button>
+			<button class="btn-up" data-amount="50">+50</button>						
+		</div>
+		
+		<div class="jq-zoom">
+			<button class="btn-zoom" data-amount="50">zoom +50</button>
+		</div>
+	-->	
+	</div>
+ 
+ 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	
+ </body>
+ </html>

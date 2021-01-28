@@ -93,7 +93,8 @@ function captureData() {
 				 Math.round(beta) + '<br />gamma: ' + Math.round(gamma);
 			  
 			  
-			$('.bearing').text(Math.round(alpha));
+			//$('.bearing').text(Math.round(alpha));
+			$('.jq-bearing').text(Math.round(alpha));
 			
 
 			//$('.scenery img').css('left', '-'+ Math.round(alpha)/3.6 +'%');
