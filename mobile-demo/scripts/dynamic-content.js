@@ -32,6 +32,8 @@ function gyroVision(pic) {
 	$('.jq-box img').on("click", function() {
 		$('.jq-box img').toggleClass('toggled');
 		//$(this).find('background','#000');
+		
+		$('.jq-gyro').toggleClass('zoomed');
 	});
 	
 	
