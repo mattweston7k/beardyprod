@@ -127,10 +127,11 @@ function makeAllMap() {
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 		});
 		
+		
 		//set markers		
 		
-		for (x = 0; x < locations[0].length; x++) { 				
-			if (x > 0 && x < locations[0].length) { //take out header row
+		for (x = 0; x < locations.length; x++) { 				
+			if (x > 0 && x < locations.length) { //take out header row
 				//dyn_string += '<div class="item-' +x+ '">'+locations[x][0] +locations[x][1] +  '</div>'; 
 				
 				var latLng = new google.maps.LatLng(locations[x][1], locations[x][0]);
