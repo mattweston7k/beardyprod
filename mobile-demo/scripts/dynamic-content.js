@@ -1,8 +1,8 @@
-//could have logic to calc items / row and make styling based on it
+var single_elem; //global var for single elements
 
 $(document).ready(function() {
 	//read array content via function call
-	readArr(locations, '.page-3', '');
+	readArr(locations, '.jq-locations', '');
 	
 	toggler();	
 	makeAllMap();
@@ -16,23 +16,13 @@ function gyroVision(pic) {
 	$('.jq-gyro').html(
 		'<div class="jq-box jq-z-elem"><img src="images/lens.png" /><img class="toggled" src="images/viewer.png" /></div><div class="jq-hider jq-hide-left jq-z-elem"></div><div class="jq-hider jq-hide-right jq-z-elem"></div>' +
 		'<div class="jq-img"><img src="' +img_folder + pic + '" /></div>'
-		/*'<button class="jq-move-left">left + 1%</button>' +
-		'<button class="jq-move-right">right + 1%</button>'			
-		*/
 	);
 	
-	$('.jq-func').removeClass('toggled');
-	
+	$('.jq-func').removeClass('toggled');	
 	$('.jq-gyro').toggleClass('toggled');
-	//$('.jq-gyro').removeClass('toggled');
-	
-	//match height of picture	
-	//$('.jq-gyro .jq-z-elem, .jq-box img').css('height', $('.jq-img img').outerHeight());
-	
+
 	$('.jq-box img').on("click", function() {
 		$('.jq-box img').toggleClass('toggled');
-		//$(this).find('background','#000');
-		
 		$('.jq-gyro').toggleClass('zoomed');
 	});
 	
@@ -90,21 +80,15 @@ function readArr(arr_name, t_element, s_direction) { //target element
 			}
 			else {				
 				if (x==2) {
-					dyn_string += '<div class="cell w-' +x+ '">'+ '<input class="jq-gmap-btn" type="button" value="' + arr_name[r][x] + '" value="gmaps" />' +'</div>' ; 	
+					dyn_string += '<div class="cell w-' +x+ '">'+ '<input data-item-index="' +r+ '" class="jq-gmap-btn" type="button" value="' + arr_name[r][x] + '" value="gmaps" />' +'</div>' ; 	
 				}
 				else {
 					dyn_string += '<div class="cell w-' +x+ '">'+ arr_name[r][x] +'</div>'; 				
 				}
 			}			
-		}
-		
+		}		
 			dyn_string += sfix;
-		
-		
-		
-		
-	}
-	
+	}	
 	$(t_element).text('').append(dyn_string);	
 }
 
@@ -178,9 +162,15 @@ function makeGmap(long_val, lat_val, c_val, d_txt) { //longitude, latitude,
 	});	
 	marker.setMap(map);	
 	google.maps.event.addListener(marker, 'click', function() {
-	  infowindow.open(map,marker);
-	});
 	
+		var y = single_elem; //global var
+		var kuva = locations[y][4];
+		infowindow.setContent('<div id="info" data-img-3d="' +locations[y][4]+ '"><h2>' + locations[y][2] + '</h2>' + 
+									'<a class="lnk" href="#" onclick=gyroVision("'+kuva+'")>Open with gyro viewer</a>' +
+								'</div>');		
+	  infowindow.open(map,marker);
+
+	});	
 }	
 
 function toggler() { //transitions	
@@ -208,6 +198,8 @@ function toggler() { //transitions
 		
 		$('#map-canvas').addClass('active');
 		makeGmap(p_long, p_lat, p_txt, d_txt);
+		
+		single_elem = $(this).attr('data-item-index');
 		
 	});
 

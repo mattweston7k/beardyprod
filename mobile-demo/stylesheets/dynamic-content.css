@@ -160,7 +160,7 @@
 /* line 7, ../sass/dynamic-content.scss */
 body {
   margin: 0;
-  padding: 0;
+  padding: 5px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -327,7 +327,7 @@ nav button:hover {
 
 /* line 191, ../sass/dynamic-content.scss */
 .jq-img img {
-  width: 600px;
+  width: 590px;
   height: 380px;
   max-width: 100%;
 }
@@ -337,7 +337,7 @@ nav button:hover {
   overflow: hidden;
   position: absolute;
   z-index: 1000;
-  max-width: 600px;
+  max-width: 590px;
   max-height: 380px;
   background: #000;
 }
@@ -403,3 +403,40 @@ nav button:hover {
   font-size: 12px;
   font-family: Arial;
 }
+
+/* line 265, ../sass/dynamic-content.scss */
+.w-0, .w-1 {
+  visibility: hidden;
+  left: -9999px;
+  position: relative;
+}
+
+/* line 271, ../sass/dynamic-content.scss */
+.w-2 {
+  display: block;
+}
+
+/* line 274, ../sass/dynamic-content.scss */
+.row {
+  padding: 0;
+  border: none;
+}
+/* line 277, ../sass/dynamic-content.scss */
+.row .cell {
+  width: auto;
+}
+
+/*
+.content {	
+	.row {
+		width: 25%;
+		float: left;
+		border: none;
+	}
+	.row:first-child {
+			width: auto;
+			float: none;
+			display: none;
+	}
+}
+*/
