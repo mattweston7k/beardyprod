@@ -80,10 +80,11 @@ function readArr(arr_name, t_element, s_direction) { //target element
 			}
 			else {				
 				if (x==2) {
-					dyn_string += '<div class="cell w-' +x+ '">'+ '<input data-item-index="' +r+ '" class="jq-gmap-btn" type="button" value="' + arr_name[r][x] + '" value="gmaps" />' +'</div>' ; 	
+					//dyn_string += '<div class="cell w-' +x+ '">'+ '<input data-item-index="' +r+ '" class="jq-gmap-btn" type="button" value="' + arr_name[r][x] + '" value="gmaps" />' +'</div>' ; 	
+					dyn_string += '<input data-item-index="' +r+ '" class="jq-gmap-btn" type="button" value="' + arr_name[r][x] + '" value="gmaps" />';
 				}
 				else {
-					dyn_string += '<div class="cell w-' +x+ '">'+ arr_name[r][x] +'</div>'; 				
+					//dyn_string += '<div class="cell w-' +x+ '">'+ arr_name[r][x] +'</div>'; 				
 				}
 			}			
 		}		
@@ -107,7 +108,7 @@ function makeAllMap() {
 		var map = new google.maps.Map(
 			document.getElementById('map-canvas'), {
 			  center: latlng,
-			  zoom: 10,
+			  zoom: 2,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 		});
 		
@@ -167,6 +168,7 @@ function makeGmap(long_val, lat_val, c_val, d_txt) { //longitude, latitude,
 		var kuva = locations[y][4];
 		infowindow.setContent('<div id="info" data-img-3d="' +locations[y][4]+ '"><h2>' + locations[y][2] + '</h2>' + 
 									'<a class="lnk" href="#" onclick=gyroVision("'+kuva+'")>Open with gyro viewer</a>' +
+									'<div>'+d_txt+'</div>'+
 								'</div>');		
 	  infowindow.open(map,marker);
 
@@ -189,17 +191,18 @@ function toggler() { //transitions
 	
 	$('.jq-gmap-btn').on("click", function() {
 	//parse string till '.' and split
-	
-		var p_lat = $(this).closest('.row').find('.w-0').text().substring(0, $(this).closest('.row').find('.w-0').text().length-1); //these were in wrong order
-		var p_long = $(this).closest('.row').find('.w-1').text().substring(0, $(this).closest('.row').find('.w-1').text().length-1);
+		var ix = $(this).attr('data-item-index');
+		
+		var p_lat = locations[ix][0]; ; //$(this).closest('.row').find('.w-0').text().substring(0, $(this).closest('.row').find('.w-0').text().length-1); //these were in wrong order
+		var p_long = locations[ix][1];  //$(this).closest('.row').find('.w-1').text().substring(0, $(this).closest('.row').find('.w-1').text().length-1);
 
-		var p_txt = $(this).closest('.row').find('.w-2').text();
-		var d_txt = $(this).closest('.row').find('.w-3').text();
+		var p_txt = locations[ix][2]; //$(this).closest('.row').find('.w-2').text();
+		var d_txt = locations[ix][3]; //$(this).closest('.row').find('.w-3').text();
 		
 		$('#map-canvas').addClass('active');
 		makeGmap(p_long, p_lat, p_txt, d_txt);
 		
-		single_elem = $(this).attr('data-item-index');
+		single_elem = ix;
 		
 	});
 

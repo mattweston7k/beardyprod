@@ -177,7 +177,7 @@ body {
 	}
 	
 	#info {
-		min-height: 50px;
+		min-height: 90px;
 		min-width: 150px;
 		h2 {
 			font-size: 15px;
@@ -278,7 +278,17 @@ body {
 		
 		width: auto;
 	}
+	input {
+		border: solid 1px #ccc;
+		border-radius: 5px;
+		background-color: #eaeaea;
+		padding: 3px 10px;
+		cursor: pointer;
+		font-family: arial;
+	}
 }
+
+
 
 /*
 .content {	

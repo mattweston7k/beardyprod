@@ -1,6 +1,6 @@
 var pf = "scene-"
 var locations = [
-  ["Longitude","Latitude","Single location","Description"],
+  ["Longitude","Latitude","Single locations","Description"],
 //2014  
   ["24.98443","60.14054","Suomenlinna 1",
 	"Suomenlinna cannons", "1000px-tester.jpg"],
