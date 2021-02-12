@@ -17,6 +17,8 @@ var locations = [
 //uk		
 	["-1.527314", "53.89689", "Harewood house", "Medieval fair", "harewood-house-1.jpg"],
 	
+	["-1.58186", "54.10951", "Fountains abbey", "", "abbey-1.jpg"],
+	
 	
 	
 //easter "eggs", japan
