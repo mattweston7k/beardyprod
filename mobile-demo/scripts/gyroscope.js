@@ -12,8 +12,10 @@ function captureData() {
 			if(alpha!=null || beta!=null || gamma!=null) 
 			  dataContainerOrientation.innerHTML = 'alpha: ' + Math.round(alpha) + '<br/>beta: ' +
 				 Math.round(beta) + '<br />gamma: ' + Math.round(gamma);
+				 
+				 
 			  			  
-			$('.bearing').text(Math.round(alpha));
+			$('.bearing').text(Math.round(alpha) + ' / 360');
 				//20 = -60
 				
 				var gw = 20; //gyro item width
