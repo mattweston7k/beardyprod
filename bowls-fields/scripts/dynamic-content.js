@@ -4,7 +4,56 @@ $(document).ready(function() {
 	
 	toggler();
 	btnSort();
+	
+	uiLogic();
 });
+
+function uiLogic() {
+	$('.jq-find').on("click", function() {
+		findOnPage();
+	});
+}
+
+function findOnPage() {	
+	$('.active .row').css('display','none'); //hide elements
+	$('.w-2:contains("'+ $('.jq-search-val').val() + '")').closest('.row').css('display','block');
+}
+
+
+$('.jq-listen').on("click", function() {
+	try {	
+		listenMic();
+	}
+	catch(e) {
+		alert('error listening to microphone: '+e);
+	}
+});
+$('.jq-stop-listen').on("click", function() {
+	try {
+		annyang.abort();
+	}
+	catch(e) {
+		alert('stop error: ' +e);
+	}	
+});
+
+function listenMic() {
+	if (annyang) {
+	  // Let's define a command.
+	  var commands = {
+		'find': function() { 
+			findOnPage();
+		}
+	  };
+	  // Add our commands to annyang
+	  annyang.addCommands(commands);
+	  
+	  annyang.start();// Start listening.
+	}
+}
+
+
+
 
 
 //http://stackoverflow.com/questions/3524827/sort-a-2d-array-by-the-second-value

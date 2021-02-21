@@ -25,6 +25,15 @@
 	</div>
 	
 	<div class="col span_4_of_12">
+		<div class="search">
+			<input class="jq-search-val" type="text" />
+			<input class="jq-find" type="button" value="Find bowling green" />
+		</div>
+		
+		
+		<input class="jq-listen" type="button" value="Listen mic">
+		<input class="jq-stop-listen" type="button" value="Stop listening">
+	
 		
 		<div id="map-canvas"></div>
 		<input class="jq-hide" type="button" value="hide" />
@@ -48,6 +57,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>	
 	<!-- dynamic content creation from js array -->
 	<script type="text/javascript" src="scripts/content/bowls.js"></script>
+	<script type="text/javascript" src="scripts/vendor/annyang.min.js"></script>
 	<script type="text/javascript" src="scripts/dynamic-content.js"></script>
  </body>
  </html>
