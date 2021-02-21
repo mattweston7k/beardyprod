@@ -43,6 +43,9 @@ function listenMic() {
 	  var commands = {
 		'find': function() { 
 			findOnPage();
+		},
+		'turn off': function() { 
+			annyang.abort();
 		}
 	  };
 	  // Add our commands to annyang
