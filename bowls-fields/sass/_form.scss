@@ -1,0 +1,41 @@
+.jq-btn {
+	border: solid 1px #666;
+	border-radius: 7px;
+	padding: 5px 10px;
+	font-weight: bold;
+	color: #333;
+	background-color: #eee;
+}
+
+
+.jq-listen {
+	&.active {
+		background-color: #32c215;
+		color: #fff;
+	}
+}
+.jq-stop-listen {
+	&.active {
+		background-color: #c21515;
+		color: #fff;
+	}
+}
+
+.instructions {
+	display: none; //toggled
+	font-size: 11px;
+	font-family: verdana;
+	border: solid 1px #ccc;
+	background-color: #efefef;
+	padding: 5px;
+	float: left;
+	position: absolute;
+}
+
+.jq-functions {
+	position: relative;
+}
+.help {	
+	background-color: #3f6ad7;
+	color: #fff;
+}

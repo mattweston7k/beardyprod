@@ -27,16 +27,18 @@
 	<div class="col span_4_of_12">
 		<div class="search">
 			<input class="jq-search-val" type="text" />
-			<input class="jq-find" type="button" value="Find bowling green" />
+			<input class="jq-btn jq-find" type="button" value="Find bowling green" />
 		</div>
 		
-		
-		<input class="jq-listen" type="button" value="Listen mic">
-		<input class="jq-stop-listen" type="button" value="Stop listening">
-	
+		<div class="jq-functions">
+			<input class="jq-btn jq-listen" type="button" value="Use mic">
+			<input class="jq-btn jq-stop-listen" type="button" value="Stop mic">
+			<input class="jq-btn help" type="button" value="?" />
+		</div>
+		<div class="instructions">Use keywords: <br /><b>"find"</b> to activate search button and <br /><b>"turn off"</b> to turn off microphone</div>
 		
 		<div id="map-canvas"></div>
-		<input class="jq-hide" type="button" value="hide" />
+		<input class="jq-hide" type="button" value="Hide gmap" />
 		
 	</div>
 </div>

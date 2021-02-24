@@ -12,6 +12,10 @@ function uiLogic() {
 	$('.jq-find').on("click", function() {
 		findOnPage();
 	});
+	
+	$('.help').on("click", function() {
+		$('.instructions').toggle(500);
+	});
 }
 
 function findOnPage() {	
@@ -23,6 +27,8 @@ function findOnPage() {
 $('.jq-listen').on("click", function() {
 	try {	
 		listenMic();
+		$('.jq-listen').addClass('active');
+		$('.jq-stop-listen').removeClass('active');
 	}
 	catch(e) {
 		alert('error listening to microphone: '+e);
@@ -31,6 +37,8 @@ $('.jq-listen').on("click", function() {
 $('.jq-stop-listen').on("click", function() {
 	try {
 		annyang.abort();
+		$('.jq-stop-listen').addClass('active');
+		$('.jq-listen').removeClass('active');
 	}
 	catch(e) {
 		alert('stop error: ' +e);

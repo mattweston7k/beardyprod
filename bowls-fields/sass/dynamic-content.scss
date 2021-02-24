@@ -1,5 +1,6 @@
 //--imports
 @import "_grid";
+@import "_form";
 $max-width: 800px;
 
 @mixin animated-obj($duration) {

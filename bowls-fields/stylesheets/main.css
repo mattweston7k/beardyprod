@@ -90,13 +90,13 @@
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 480px) {
   /* line 78, ../sass/_grid.scss */
   .col {
     margin: 1% 0 1% 0%;
   }
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 480px) {
   /* line 84, ../sass/_grid.scss */
   .span_12_of_12 {
     width: 100%;
@@ -184,35 +184,80 @@ label {
 }
 
 /*	[/fonts]	*/
+/* line 1, ../sass/_form.scss */
+.jq-btn {
+  border: solid 1px #666;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #333;
+  background-color: #eee;
+}
+
+/* line 12, ../sass/_form.scss */
+.jq-listen.active {
+  background-color: #32c215;
+  color: #fff;
+}
+
+/* line 18, ../sass/_form.scss */
+.jq-stop-listen.active {
+  background-color: #c21515;
+  color: #fff;
+}
+
+/* line 24, ../sass/_form.scss */
+.instructions {
+  display: none;
+  font-size: 11px;
+  font-family: verdana;
+  border: solid 1px #ccc;
+  background-color: #efefef;
+  padding: 5px;
+  float: left;
+  position: absolute;
+}
+
+/* line 35, ../sass/_form.scss */
+.jq-functions {
+  position: relative;
+}
+
+/* line 38, ../sass/_form.scss */
+.help {
+  background-color: #3f6ad7;
+  color: #fff;
+}
+
 /*	[common]	*/
-/* line 6, ../sass/main.scss */
+/* line 7, ../sass/main.scss */
 .fright {
   float: right;
 }
 
-/* line 9, ../sass/main.scss */
+/* line 10, ../sass/main.scss */
 .fleft {
   float: left;
 }
 
-/* line 12, ../sass/main.scss */
+/* line 13, ../sass/main.scss */
 .no-top-margin {
   margin-top: 0;
 }
 
-/* line 15, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 .pos-rel {
   position: relative;
 }
 
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 .pos-abs {
   position: absolute;
 }
 
 /*	[/common]	*/
 /*	[form]	*/
-/* line 24, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 .btn {
   background: #ccc;
   padding: 2px 5px;
@@ -221,44 +266,44 @@ label {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 31, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 .btn:hover {
   opacity: 0.7;
 }
 
-/* line 35, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 .usr-input {
   border: solid 1px #999;
   width: 90%;
   margin-bottom: 10px;
 }
 
-/* line 40, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 label {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 .title {
   font-weight: bold;
   font-size: 14px;
 }
 
 /*	[/form]	*/
-/* line 51, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .jq-item {
   margin-bottom: 15px;
   border-bottom: solid 1px #ccc;
 }
 
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .jq-html {
   padding: 10px;
   border: solid 2px #ccc;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .jq-area {
   border: solid 1px #ccc;
   width: 95%;
