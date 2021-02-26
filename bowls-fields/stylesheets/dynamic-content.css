@@ -157,7 +157,16 @@
     width: 100%;
   }
 }
-/* line 1, ../sass/_form.scss */
+/* line 2, ../sass/_form.scss */
+body .w-0 {
+  display: none;
+}
+/* line 5, ../sass/_form.scss */
+body .w-1 {
+  display: none;
+}
+
+/* line 10, ../sass/_form.scss */
 .jq-btn {
   border: solid 1px #666;
   border-radius: 7px;
@@ -167,19 +176,19 @@
   background-color: #eee;
 }
 
-/* line 12, ../sass/_form.scss */
+/* line 21, ../sass/_form.scss */
 .jq-listen.active {
   background-color: #32c215;
   color: #fff;
 }
 
-/* line 18, ../sass/_form.scss */
+/* line 27, ../sass/_form.scss */
 .jq-stop-listen.active {
   background-color: #c21515;
   color: #fff;
 }
 
-/* line 24, ../sass/_form.scss */
+/* line 33, ../sass/_form.scss */
 .instructions {
   display: none;
   font-size: 11px;
@@ -191,12 +200,12 @@
   position: absolute;
 }
 
-/* line 35, ../sass/_form.scss */
+/* line 44, ../sass/_form.scss */
 .jq-functions {
   position: relative;
 }
 
-/* line 38, ../sass/_form.scss */
+/* line 47, ../sass/_form.scss */
 .help {
   background-color: #3f6ad7;
   color: #fff;
