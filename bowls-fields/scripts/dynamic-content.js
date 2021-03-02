@@ -54,6 +54,8 @@ function listenMic() {
 		},
 		'turn off': function() { 
 			annyang.abort();
+			$('.jq-stop-listen').addClass('active');
+			$('.jq-listen').removeClass('active');
 		}
 	  };
 	  // Add our commands to annyang
