@@ -192,8 +192,12 @@ body .w-0 {
 body .w-1 {
   display: none;
 }
+/* line 8, ../sass/_form.scss */
+body .cell {
+  width: 22%;
+}
 
-/* line 10, ../sass/_form.scss */
+/* line 13, ../sass/_form.scss */
 .jq-btn {
   border: solid 1px #666;
   border-radius: 7px;
@@ -203,19 +207,19 @@ body .w-1 {
   background-color: #eee;
 }
 
-/* line 21, ../sass/_form.scss */
+/* line 24, ../sass/_form.scss */
 .jq-listen.active {
   background-color: #32c215;
   color: #fff;
 }
 
-/* line 27, ../sass/_form.scss */
+/* line 30, ../sass/_form.scss */
 .jq-stop-listen.active {
   background-color: #c21515;
   color: #fff;
 }
 
-/* line 33, ../sass/_form.scss */
+/* line 36, ../sass/_form.scss */
 .instructions {
   display: none;
   font-size: 11px;
@@ -227,12 +231,12 @@ body .w-1 {
   position: absolute;
 }
 
-/* line 44, ../sass/_form.scss */
+/* line 47, ../sass/_form.scss */
 .jq-functions {
   position: relative;
 }
 
-/* line 47, ../sass/_form.scss */
+/* line 50, ../sass/_form.scss */
 .help {
   background-color: #3f6ad7;
   color: #fff;
