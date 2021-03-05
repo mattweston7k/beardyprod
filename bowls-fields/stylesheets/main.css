@@ -194,7 +194,7 @@ body .w-1 {
 }
 /* line 8, ../sass/_form.scss */
 body .cell {
-  width: 22%;
+  width: 25%;
 }
 
 /* line 13, ../sass/_form.scss */
@@ -207,19 +207,24 @@ body .cell {
   background-color: #eee;
 }
 
-/* line 24, ../sass/_form.scss */
+/* line 21, ../sass/_form.scss */
+.jq-search-val {
+  width: 120px;
+}
+
+/* line 26, ../sass/_form.scss */
 .jq-listen.active {
   background-color: #32c215;
   color: #fff;
 }
 
-/* line 30, ../sass/_form.scss */
+/* line 32, ../sass/_form.scss */
 .jq-stop-listen.active {
   background-color: #c21515;
   color: #fff;
 }
 
-/* line 36, ../sass/_form.scss */
+/* line 38, ../sass/_form.scss */
 .instructions {
   display: none;
   font-size: 11px;
@@ -231,12 +236,12 @@ body .cell {
   position: absolute;
 }
 
-/* line 47, ../sass/_form.scss */
+/* line 49, ../sass/_form.scss */
 .jq-functions {
   position: relative;
 }
 
-/* line 50, ../sass/_form.scss */
+/* line 52, ../sass/_form.scss */
 .help {
   background-color: #3f6ad7;
   color: #fff;
