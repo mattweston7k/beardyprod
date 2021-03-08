@@ -90,69 +90,74 @@
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
   /* line 78, ../sass/_grid.scss */
   .col {
     margin: 1% 0 1% 0%;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
   /* line 84, ../sass/_grid.scss */
+  .wrapper {
+    max-height: 360px !important;
+  }
+
+  /* line 87, ../sass/_grid.scss */
   .span_12_of_12 {
     width: 100%;
   }
 
-  /* line 87, ../sass/_grid.scss */
+  /* line 90, ../sass/_grid.scss */
   .span_11_of_12 {
     width: 100%;
   }
 
-  /* line 90, ../sass/_grid.scss */
+  /* line 93, ../sass/_grid.scss */
   .span_10_of_12 {
     width: 100%;
   }
 
-  /* line 93, ../sass/_grid.scss */
+  /* line 96, ../sass/_grid.scss */
   .span_9_of_12 {
     width: 100%;
   }
 
-  /* line 96, ../sass/_grid.scss */
+  /* line 99, ../sass/_grid.scss */
   .span_8_of_12 {
     width: 100%;
   }
 
-  /* line 99, ../sass/_grid.scss */
+  /* line 102, ../sass/_grid.scss */
   .span_7_of_12 {
     width: 100%;
   }
 
-  /* line 102, ../sass/_grid.scss */
+  /* line 105, ../sass/_grid.scss */
   .span_6_of_12 {
     width: 100%;
   }
 
-  /* line 105, ../sass/_grid.scss */
+  /* line 108, ../sass/_grid.scss */
   .span_5_of_12 {
     width: 100%;
   }
 
-  /* line 108, ../sass/_grid.scss */
+  /* line 111, ../sass/_grid.scss */
   .span_4_of_12 {
     width: 100%;
   }
 
-  /* line 111, ../sass/_grid.scss */
+  /* line 114, ../sass/_grid.scss */
   .span_3_of_12 {
     width: 100%;
   }
 
-  /* line 114, ../sass/_grid.scss */
+  /* line 117, ../sass/_grid.scss */
   .span_2_of_12 {
     width: 100%;
   }
 
-  /* line 117, ../sass/_grid.scss */
+  /* line 120, ../sass/_grid.scss */
   .span_1_of_12 {
     width: 100%;
   }
@@ -234,14 +239,15 @@ body .cell {
   padding: 5px;
   float: left;
   position: absolute;
+  z-index: 9999;
 }
 
-/* line 49, ../sass/_form.scss */
+/* line 50, ../sass/_form.scss */
 .jq-functions {
   position: relative;
 }
 
-/* line 52, ../sass/_form.scss */
+/* line 53, ../sass/_form.scss */
 .help {
   background-color: #3f6ad7;
   color: #fff;
