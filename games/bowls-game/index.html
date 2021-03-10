@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Bowls game</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="stylesheets/bowls-game.css" />
+ </head> 
+
+<body>
+
+
+<div class="jq-gyro toggled">	
+</div>
+
+
+
+<div class="section group">
+	<div class="col span_5_of_12">
+		<h2>Bowls UI</h2>
+		<div class="functions">
+			<button class="jq-btn jq-btn-change jq--change-bias">Bias: <span class="jq--val-bias">thumb</span></button>
+			<button class="jq-btn jq-btn-change jq--change-hand">Handed:<span class="jq--val-hand">right</span></button>
+			
+			<div class="jq--weight pos-relative">
+				<div class="title--sub">Bowls weight:</div>				
+				<div class="jq-fixed-w">2"<span class="jq--bowls-weight">10</span></div>
+				
+				<div class="jq-img--item">
+					<img src="images/item-bowl.png" />
+				</div>
+				
+				<div class="clearer"></div>
+				<button class="jq-btn">-</button>
+				<button class="jq-btn">+</button>
+			</div>
+			
+			<button class="jq--btn-action jq-btn jq--jack">Target</button>			
+			<button class="jq--btn-action jq-btn jq--throw">Throw</button>
+			<button class="jq--btn-action jq-btn jq--stop">Stop</button>
+		</div>
+	</div>	
+	<div class="col span_5_of_12">
+		<h2>[Green]</h2>
+		
+		<div id="paper1"></div>
+		
+		<div id="paper-1" class="jq-game--area pos-relative">
+			<canvas id="game-area"></canvas>		
+		</div>
+	</div>
+	<div class="col span_2_of_12">
+		<div id="dbg-data"></div>
+	</div>
+</div>
+	<div class="section group">
+	
+		<div class="col span_12_of_12">
+			<h2>Gyroscope stats</h2>
+			
+			<div id="jq-acc">
+			
+			</div>
+			
+			<div class="gyro-data">
+				<div id="dataContainerOrientation">Orientation stats</div>
+				<div id="dataContainerMotion">Motion stats</div>
+				<div id="dataContainerAcceleration">Acceleration stats</div>
+				<div id="jq-acceleration" class="calc-val"></div>
+			</div>
+
+		</div>
+	
+	</div>
+</div>
+
+
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	
+		
+		<script type="text/javascript" src="scripts/vendor/raphael-min.js"></script>
+	<script type="text/javascript" src="scripts/bowls-game.js"></script>
+	<script type="text/javascript" src="scripts/gyroscope.js"></script>
+ </body>
+ </html>

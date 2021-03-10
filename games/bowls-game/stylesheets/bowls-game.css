@@ -1,0 +1,262 @@
+/* line 2, ../sass/_grid.scss */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 9, ../sass/_grid.scss */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+/* line 14, ../sass/_grid.scss */
+.col:first-child {
+  margin-left: 0;
+}
+
+/* line 19, ../sass/_grid.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+/* line 23, ../sass/_grid.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 29, ../sass/_grid.scss */
+.span_12_of_12 {
+  width: 100%;
+}
+
+/* line 33, ../sass/_grid.scss */
+.span_11_of_12 {
+  width: 91.53%;
+}
+
+/* line 36, ../sass/_grid.scss */
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+/* line 40, ../sass/_grid.scss */
+.span_9_of_12 {
+  width: 74.6%;
+}
+
+/* line 44, ../sass/_grid.scss */
+.span_8_of_12 {
+  width: 66.13%;
+}
+
+/* line 48, ../sass/_grid.scss */
+.span_7_of_12 {
+  width: 57.66%;
+}
+
+/* line 52, ../sass/_grid.scss */
+.span_6_of_12 {
+  width: 49.2%;
+}
+
+/* line 56, ../sass/_grid.scss */
+.span_5_of_12 {
+  width: 40.73%;
+}
+
+/* line 60, ../sass/_grid.scss */
+.span_4_of_12 {
+  width: 32.26%;
+}
+
+/* line 64, ../sass/_grid.scss */
+.span_3_of_12 {
+  width: 23.8%;
+}
+
+/* line 68, ../sass/_grid.scss */
+.span_2_of_12 {
+  width: 15.33%;
+}
+
+/* line 72, ../sass/_grid.scss */
+.span_1_of_12 {
+  width: 6.866%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  /* line 78, ../sass/_grid.scss */
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 84, ../sass/_grid.scss */
+  .span_12_of_12 {
+    width: 100%;
+  }
+
+  /* line 87, ../sass/_grid.scss */
+  .span_11_of_12 {
+    width: 100%;
+  }
+
+  /* line 90, ../sass/_grid.scss */
+  .span_10_of_12 {
+    width: 100%;
+  }
+
+  /* line 93, ../sass/_grid.scss */
+  .span_9_of_12 {
+    width: 100%;
+  }
+
+  /* line 96, ../sass/_grid.scss */
+  .span_8_of_12 {
+    width: 100%;
+  }
+
+  /* line 99, ../sass/_grid.scss */
+  .span_7_of_12 {
+    width: 100%;
+  }
+
+  /* line 102, ../sass/_grid.scss */
+  .span_6_of_12 {
+    width: 100%;
+  }
+
+  /* line 105, ../sass/_grid.scss */
+  .span_5_of_12 {
+    width: 100%;
+  }
+
+  /* line 108, ../sass/_grid.scss */
+  .span_4_of_12 {
+    width: 100%;
+  }
+
+  /* line 111, ../sass/_grid.scss */
+  .span_3_of_12 {
+    width: 100%;
+  }
+
+  /* line 114, ../sass/_grid.scss */
+  .span_2_of_12 {
+    width: 100%;
+  }
+
+  /* line 117, ../sass/_grid.scss */
+  .span_1_of_12 {
+    width: 100%;
+  }
+}
+/* line 13, ../sass/bowls-game.scss */
+.pos-relative {
+  position: relative;
+}
+
+/* line 16, ../sass/bowls-game.scss */
+.clearer {
+  clear: both;
+}
+
+/* line 20, ../sass/bowls-game.scss */
+.title--sub {
+  font-weight: bold;
+}
+
+/* line 23, ../sass/bowls-game.scss */
+body {
+  font-family: Arial;
+}
+
+/*	[jq elements]	*/
+/* line 28, ../sass/bowls-game.scss */
+.jq-btn {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 32, ../sass/bowls-game.scss */
+.jq-btn span {
+  font-weight: bold;
+}
+
+/* line 36, ../sass/bowls-game.scss */
+.jq-btn-change {
+  min-width: 100px;
+}
+
+/* line 39, ../sass/bowls-game.scss */
+.jq--btn-action {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* line 45, ../sass/bowls-game.scss */
+.jq--throw {
+  background-color: #59c757;
+}
+
+/* line 48, ../sass/bowls-game.scss */
+.jq--stop {
+  background-color: #c75f57;
+}
+
+/* line 51, ../sass/bowls-game.scss */
+.jq--jack {
+  background-color: #201f1f;
+}
+
+/* line 55, ../sass/bowls-game.scss */
+.jq--weight button {
+  font-weight: bold;
+  min-width: 30px;
+  font-size: 16px;
+}
+/* line 60, ../sass/bowls-game.scss */
+.jq--weight .jq-fixed-w {
+  display: inline-block;
+  min-width: 45px;
+  text-align: center;
+  position: absolute;
+  left: 53px;
+  top: 70px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* line 72, ../sass/bowls-game.scss */
+.jq-img--item {
+  float: left;
+  border: solid 1px #ccc;
+  background-color: #176a16;
+}
+/* line 77, ../sass/bowls-game.scss */
+.jq-img--item img {
+  padding: 15px;
+}
+
+/* line 83, ../sass/bowls-game.scss */
+.jq-game--area canvas {
+  background-color: #176a16;
+  height: 300px;
+  width: 300px;
+}
+/* line 88, ../sass/bowls-game.scss */
+.jq-game--area svg {
+  position: absolute !important;
+  z-index: 100;
+}
+
+/*	[/jq elements]	*/
