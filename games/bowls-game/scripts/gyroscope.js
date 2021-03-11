@@ -14,15 +14,14 @@ function captureData() {
 			if(alpha!=null || beta!=null || gamma!=null) 
 			  dataContainerOrientation.innerHTML = 'alpha: ' + Math.round(alpha) + '<br/>beta: ' +
 				 Math.round(beta) + '<br />gamma: ' + Math.round(gamma);
-				 
-				 
-			  			  
-			$('.bearing').text(Math.round(alpha) + ' / 360');
+			  
+			$('#usr-x').text(Math.round(alpha) + ' / 360');
+			$('#usr-y').text(Math.round(beta) + ' / 360');
 				//20 = -60
 
 		  }, false);
 	}
-	
+	/*
 	// Check for support for DeviceMotion events
 	if(window.DeviceMotionEvent) {
 	window.addEventListener('devicemotion', function(event) {
@@ -40,17 +39,9 @@ function captureData() {
 				'<br />beta: ' + Math.round(r.beta) + '<br/>gamma: ' + Math.round(r.gamma) + '<br />';
 			
 			dataContainerMotion.innerHTML = html;  
-
 			dataContainerAcceleration.innerHTML = html2;  
-			
-	/*
-			$('.jq--throw').mouseup(function() {
-				$('#jq-acceleration').text(z);
-			});
-	*/		
-			
-			
+
 		  });
 	}
-
+*/
 }	

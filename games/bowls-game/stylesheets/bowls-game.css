@@ -260,3 +260,8 @@ body {
 }
 
 /*	[/jq elements]	*/
+/* line 96, ../sass/bowls-game.scss */
+.jq-gyro .test {
+  width: 40px;
+  text-align: center;
+}

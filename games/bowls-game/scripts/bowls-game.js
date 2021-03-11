@@ -37,7 +37,7 @@ function drawGreen() {
 //draw random target
 
 function drawTarget() {
-	var t_x = Math.floor((Math.random() * 180) + 10);
+	var t_x = Math.floor((Math.random() * 280) + 10);
 	var t_y = Math.floor((Math.random() * 280) + 10);
 
 	var paper = Raphael("paper-1", 300, 300);
@@ -51,14 +51,15 @@ function drawOncanvas() {
 	var w = 300;
 	var h = 300;
 
-	x_pos = 50;
-	y_pos = 40;
+	x_pos = $('#usr-x').val(); //120;
+	y_pos = $('#usr-y').val(); //160;
 
 	var paper = Raphael("paper-1", w, h);
 	paper.text(150, 295, "Player-1");
 
 
-
+//alpha -> 360
+//beta -> angle
 
 // Sets the fill attribute of the circle to red (#f00)
 //circle.attr("fill", "#f00");
@@ -68,7 +69,9 @@ var circle = paper.circle(120, 60, 8);
 circle.animate( {fill: "#aaa", stroke: "#666" }, 700);
 
 //Move to 50,100 then draw a Line to 120,120, then draw a Line to 120,40 and then close the path (Z):
-var p1 = paper.path("M150,285 L120, 60 Z");; //paper.path("M50,100L120,120L140,40Z");
+//var p1 = paper.path("M150,285 L120, 60 Z"); //paper.path("M50,100L120,120L140,40Z");
+
+var p1 = paper.path("M150,285 L" + x_pos+ ", " +y_pos+ " Z");
 
 p1.attr({"stroke-width": 1 }); //, fill: "red"})
 
