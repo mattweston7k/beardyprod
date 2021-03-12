@@ -1,0 +1,17 @@
+body {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+a {
+	display: block;
+	color: #178dc8;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+li {
+	list-style-type: none;
+	margin-bottom: 15px;	
+}
