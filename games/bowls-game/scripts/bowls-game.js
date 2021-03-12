@@ -65,7 +65,8 @@ function drawOncanvas() {
 //circle.attr("fill", "#f00");
 
 // Creates circle at x = 50, y = 40, with radius 10
-var circle = paper.circle(120, 60, 8);
+//var circle = paper.circle(120, 60, 8);
+var circle = paper.circle(x_pos, y_pos, 8);
 circle.animate( {fill: "#aaa", stroke: "#666" }, 700);
 
 //Move to 50,100 then draw a Line to 120,120, then draw a Line to 120,40 and then close the path (Z):

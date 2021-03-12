@@ -14,9 +14,9 @@ function captureData() {
 			if(alpha!=null || beta!=null || gamma!=null) 
 			  dataContainerOrientation.innerHTML = 'alpha: ' + Math.round(alpha) + '<br/>beta: ' +
 				 Math.round(beta) + '<br />gamma: ' + Math.round(gamma);
-			  
-			$('#usr-x').text(Math.round(alpha) + ' / 360');
-			$('#usr-y').text(Math.round(beta) + ' / 360');
+		
+			$('#usr-x').val(Math.round(alpha));
+			$('#usr-y').val(Math.round(beta));
 				//20 = -60
 
 		  }, false);
