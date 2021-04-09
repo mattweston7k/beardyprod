@@ -13,6 +13,17 @@
 
 </head> 
 
+<script>
+	
+	var m = "message that is encoded";	
+	var u = "http://beardyprod.github.io/test-ground/metatags/meta-item-2.html";
+	
+	var prefix = "https://twitter.com/intent/tweet?text=";
+	var mfix = "&url=";
+	var suffix = "&via=beardyprod&related=beardyproductions";	
+	var custom_param = prefix + encodeURIComponent(m) + mfix + encodeURIComponent(u) + suffix;
+</script>
+
 <body>
 <h1>metatag tester</h1>
 <div>
@@ -23,9 +34,9 @@
 		</li>
 		<li>
 			<a target="_blank" class="icon--fb" href="https://www.facebook.com/sharer/sharer.php?u=http://beardyprod.github.io/test-ground/metatags/meta-item-2.html&display=popup">share item 2 on facebook</a>
-			<!--
-			<a target="_blank" class="icon--twitter" href="https://twitter.com/intent/tweet?text=[ENCODED MESSAGE TO GO IN TWEET]&url=[ENCODED URL]&via=beardyprod&related=beardyproductions">share item 2 on twitter</a>
-			-->
+			
+			<a target="_blank" class="icon--twitter" href="javascript:window.open(custom_param);">share item 2 on twitter</a>
+			
 		</li>
 	</ul>
 </div>
