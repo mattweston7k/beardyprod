@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>     <html class="no-js ie ie8 ie7 lte9 lte8" lang="en">      <![endif]-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Text adventure</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="css/adventure.css" />
+  
+ </head> 
+
+<body class="no-script">
+<div class="wrapper">
+	<div class="section group">
+		<div class="col span_2_of_12">
+		
+			<div id="jq-actions" class="cmd cmd--list"></div>
+			
+			
+		</div>
+		<div class="col span_6_of_12">
+			<div id="jq-description" class="txt txt--shadow">
+			
+			</div>
+		</div>
+		<div class="col span_4_of_12">			
+
+			<button id="jq-listen" class="btn btn--voice" id="jq-speech">Voice control <b>on</b></button>
+			<button id="jq-stop-listen" class="btn btn--voice" id="jq-speech">Voice control <b>off</b></button>
+			
+		</div>
+	</div>
+	<div class="section group">
+		<div class="col span_12_of_12">			
+			
+			<div id="jq-map" class="map map--wrap">
+				<img src="images/uk-map.jpg" />
+				<div class="map--location">
+					<div id="jq-compass" class="compass txt--shadow">-</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/vendor/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	<script type="text/javascript" src="scripts/vendor/annyang.min.js"></script>
+	
+	<script type="text/javascript" src="scripts/adventure.js"></script>	
+	
+	
+ </body>
+ </html>
