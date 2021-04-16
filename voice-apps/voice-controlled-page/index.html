@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>POC</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="css/voice-page.css" />
+  
+ </head> 
+
+<body class="no-script">
+<div class="wrapper">
+	<div class="section group">
+		<div class="col span_12_of_12">
+			
+			<ul class="nav nav--top">
+				<li><a href="#">Art</a></li>
+				<li><a href="#">Politics</a></li>
+				<li><a href="#">Health</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">News</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="section group">
+		<div class="col span_7_of_12">
+			<button id="jq-listen" class="btn btn--voice">Voice control <b>on</b></button>
+			<button id="jq-stop-listen" class="btn btn--voice">Voice control <b>off</b></button>			
+		</div>	
+		<div class="col span_5_of_12">
+			<button id="jq-change-lang">language</button>			
+		</div>
+	</div>
+	<div class="section group">
+		<div class="col span_4_of_12">
+			<h3>Commands:</h3>
+			scrolls to element
+		</div>
+		<div class="col span_8_of_12">
+			<p><b>[en]</b><br />
+				home, art, politics, health, weather, news
+			</p>
+			<p><b>[fi]</b><br />
+				koti, taide, politiikka, terveys, sää, uutiset
+			</p>
+		</div>	
+	</div>
+	<div class="section group">
+		<div class="col span_4_of_12">
+			<div class="block block--normal">
+				<h2>normal block header</h2>
+				<p>paragraph content text.</p>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis congue libero, in fermentum diam. Aliquam erat volutpat. Nunc neque mauris, fermentum sit amet massa vitae, mattis placerat ipsum. In at semper purus. Proin vitae enim tristique, consectetur sapien in, porta eros. Pellentesque eros metus, tempus et lobortis eu, ultrices consequat tellus. Ut eu ligula in erat varius posuere et faucibus lectus. Nullam nec accumsan lacus. Proin a dui nec elit consectetur sodales. Vestibulum a feugiat sapien.
+				</p>
+			</div>
+			<div class="block block--medium">
+				<h2>medium block header</h2>
+				<p>paragraph content text</p>
+				<p>
+				In ullamcorper ante risus, pharetra pulvinar orci sollicitudin vel. Sed tempor augue purus, rhoncus mattis massa dictum sit amet. In pretium placerat euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a nulla ullamcorper, semper enim vel, dictum felis. In tristique mollis elit, id molestie nisl facilisis pretium. Etiam ut ipsum sollicitudin erat rutrum ullamcorper. Mauris eget blandit magna. Cras vel aliquet velit. Sed tempor leo sed arcu pharetra ullamcorper. Pellentesque ex nisl, fringilla at pellentesque non, lacinia tristique tellus.
+				</p>
+			</div>
+			<div class="block block--normal block__art">
+				<h2>Art</h2>
+				<p>paragraph content text</p>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis congue libero, in fermentum diam. Aliquam erat volutpat. Nunc neque mauris, fermentum sit amet massa vitae, mattis placerat ipsum. In at semper purus. Proin vitae enim tristique, consectetur sapien in, porta eros. Pellentesque eros metus, tempus et lobortis eu, ultrices consequat tellus. Ut eu ligula in erat varius posuere et faucibus lectus. Nullam nec accumsan lacus. Proin a dui nec elit consectetur sodales. Vestibulum a feugiat sapien.
+				</p>
+			</div>
+				
+		</div>
+		<div class="col span_8_of_12">
+			<div class="block block--tall block__latest-news">
+				<h2>latest news</h2>
+				<p>tall block paragraph content text</p>
+				<p>
+				In ullamcorper ante risus, pharetra pulvinar orci sollicitudin vel. Sed tempor augue purus, rhoncus mattis massa dictum sit amet. In pretium placerat euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a nulla ullamcorper, semper enim vel, dictum felis. In tristique mollis elit, id molestie nisl facilisis pretium. Etiam ut ipsum sollicitudin erat rutrum ullamcorper. Mauris eget blandit magna. Cras vel aliquet velit. Sed tempor leo sed arcu pharetra ullamcorper. Pellentesque ex nisl, fringilla at pellentesque non, lacinia tristique tellus.
+				</p>
+			</div>
+			<div class="block block--normal block__weather">
+				<h2>weather</h2>
+				<p>normal block paragraph content text</p>
+				<p>
+				In ullamcorper ante risus, pharetra pulvinar orci sollicitudin vel. Sed tempor augue purus, rhoncus mattis massa dictum sit amet. In pretium placerat euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a nulla ullamcorper, semper enim vel, dictum felis. In tristique mollis elit, id molestie nisl facilisis pretium. Etiam ut ipsum sollicitudin erat rutrum ullamcorper. Mauris eget blandit magna. Cras vel aliquet velit. Sed tempor leo sed arcu pharetra ullamcorper. Pellentesque ex nisl, fringilla at pellentesque non, lacinia tristique tellus.
+				</p>
+			</div>
+			<div class="block news block--medium block__news">
+				<h2>news</h2>
+				<p>medium block paragraph content text</p>
+				<p>
+				In ullamcorper ante risus, pharetra pulvinar orci sollicitudin vel. Sed tempor augue purus, rhoncus mattis massa dictum sit amet. In pretium placerat euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a nulla ullamcorper, semper enim vel, dictum felis. In tristique mollis elit, id molestie nisl facilisis pretium. Etiam ut ipsum sollicitudin erat rutrum ullamcorper. Mauris eget blandit magna. Cras vel aliquet velit. Sed tempor leo sed arcu pharetra ullamcorper. Pellentesque ex nisl, fringilla at pellentesque non, lacinia tristique tellus.
+				</p>
+			</div>
+			<div class="block block--normal block__health">
+				<h2>health</h2>
+				<p>normal block paragraph content text</p>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis congue libero, in fermentum diam. Aliquam erat volutpat. Nunc neque mauris, fermentum sit amet massa vitae, mattis placerat ipsum. In at semper purus. Proin vitae enim tristique, consectetur sapien in, porta eros. Pellentesque eros metus, tempus et lobortis eu, ultrices consequat tellus. Ut eu ligula in erat varius posuere et faucibus lectus. Nullam nec accumsan lacus. Proin a dui nec elit consectetur sodales. Vestibulum a feugiat sapien.
+				</p>
+			</div>
+			<div class="block block--medium block__politics">
+				<h2>Politics</h2>
+				<p>normal block paragraph content text</p>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis congue libero, in fermentum diam. Aliquam erat volutpat. Nunc neque mauris, fermentum sit amet massa vitae, mattis placerat ipsum. In at semper purus. Proin vitae enim tristique, consectetur sapien in, porta eros. Pellentesque eros metus, tempus et lobortis eu, ultrices consequat tellus. Ut eu ligula in erat varius posuere et faucibus lectus. Nullam nec accumsan lacus. Proin a dui nec elit consectetur sodales. Vestibulum a feugiat sapien.
+				</p>
+			</div>	
+		</div>
+	</div>
+</div>
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/vendor/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	<script type="text/javascript" src="scripts/vendor/annyang.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/jquery.scrollTo.min.js"></script>
+	
+	<script type="text/javascript" src="scripts/voice-page.js"></script>	
+	
+	
+ </body>
+ </html>

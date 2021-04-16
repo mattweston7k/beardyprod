@@ -1,0 +1,104 @@
+//--imports
+@import "_grid";
+
+$max-w: 600px;
+$padding: 15px;
+$img-folder: "../images/";
+$border-color: #666;
+
+@mixin shadow {
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+	-moz-box-shadow:    0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+	box-shadow:         0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+}
+@mixin animated-obj($duration) {
+	-webkit-transition: all $duration ease-in-out;
+	transition: all $duration ease-in-out;
+}
+
+body {
+	font-family: Arial;
+	background: #ccc; 
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: $max-w - $padding*2;
+	padding: $padding;
+	border: solid 1px #666;
+	@include shadow;
+	background-color: #fff;
+}
+
+video {
+	max-width: 100%;
+}
+
+ul.nav {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	float: left;
+	width: 100%;
+	li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		float: left;
+		display: block;
+		width: 20%;
+		text-align: center;
+		
+		a {
+			display: block;
+			border-left: solid 1px $border-color;
+			padding: 5px 10px;
+			font-size: 13px;
+		}
+		&:first-child {
+			a {
+				border-left: none;
+			}
+		}
+	}
+}
+//typography
+
+h2 {
+	margin: 0 0 15px 0;
+}
+h3 {
+	//margin: 0 0 5px 0;
+	color: #2db747;
+}
+.block {
+	padding: 15px;
+	background-color: #abdeaa;
+	margin-bottom: 15px;
+	@include animated-obj(1.5s);
+}
+//---simulate heights:
+
+.block--tall {
+	background-color: #aaadde;
+	min-height: 500px;
+}
+
+.block--medium {
+	background-color: #decfaa;	
+	min-height: 220px;
+}
+/*
+.col {
+	float: none;
+	width: 100%;
+}
+*/
+
+.fi {
+	background-color: #2934e1;
+	color: #fff;
+}
+
+.blurred {
+	opacity: 0.2;
+}
