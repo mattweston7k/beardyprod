@@ -1,16 +1,7 @@
-//voice-page.js
-
-//$('body').scrollTo( $('.block--medium:eq(1)'), 800 );
-
-//sc( $('.block--medium:eq(1)') );
-
-//sc( $('.block__art') );
-
-
 $(document).ready(function() {
 	topnavLogic();
 	voiceControl();
-	
+	simulateFunc();
 	
 	$('#jq-change-lang').on("click", function(e) {
 		$(this).toggleClass('fi');
@@ -21,7 +12,10 @@ $(document).ready(function() {
 function topnavLogic() {
 	$('.nav--top a').on("click", function(e) {
 		e.preventDefault();
-		if ($(this).text() == "Art") {
+		if ($(this).text() == "Home") {
+			sc( $('.wrapper'), false );
+		}
+		else if ($(this).text() == "Art") {
 			sc( $('.block__art'), true );
 		}
 		else if ($(this).text() == "Politics") {
@@ -71,7 +65,11 @@ function listenMic() {
 		},	
 		'news' : function() { 			
 			sc( $('.block__news'), true );
-		}
+		},
+		'Text *term': writeTxt,
+		'Find': findOnPage,
+		'reset' : resetSearch,
+		'voice off' : stopMic
 	  };
 
 	//annyang.setLanguage('fi');	
@@ -80,6 +78,15 @@ function listenMic() {
 
 	  // Start listening.
 	  annyang.start();
+	}
+}
+
+function stopMic() {
+	try {
+		annyang.abort();
+	}
+	catch(e) {
+		alert('stop error: ' +e);
 	}
 }
 
@@ -103,7 +110,9 @@ function listenMicFI() {
 		},	
 		'uutiset' : function() { 			
 			sc( $('.block__news'), true );
-		}
+		},
+		'Text *term': writeTxt,
+		'Find': findOnPage
 	  };
 
 	annyang.setLanguage('fi');	
@@ -139,3 +148,89 @@ function voiceControl() {
 		}	
 	});
 }
+
+//------------
+jQuery.fn.highlight = function (str, className) {
+    var regex = new RegExp(str, "gi");
+    return this.each(function () {
+        $(this).contents().filter(function() {
+            return this.nodeType == 3 && regex.test(this.nodeValue);
+        }).replaceWith(function() {
+            return (this.nodeValue || "").replace(regex, function(match) {
+                return "<span class=\"" + className + "\">" + match + "</span>";
+            });
+        });
+    });		
+}; 
+
+function findOnPage() {
+	
+	var stxt =  $('#jq-search-term').val().toString(); //"to save and improve";  //searched text
+	$(".main *").highlight(stxt, "jq-focused");
+	if ( $('.jq-focused').length > 1 ) {
+		indexElements('.jq-focused');		
+		$('.jq-focused').each(function () {
+			$(this).append('<div class="jq-index">' + $(this).attr("jdex") +'</div>');
+		});		
+	}	
+	//fadeIn
+	$('.js-panel').fadeIn(500);
+	$('#js-find-count').text(
+		$('.jq-focused').size()
+	);	
+}
+
+function resetSearch() {
+	$('#js-find-count').text('');
+	$('.jq-index').remove();
+	$('.jq-focused').contents().unwrap();
+	$('.js-panel').fadeOut(200);
+}
+
+//--no microphone
+function simulateFunc() {
+	$('.js-simulate').on("click", function(e) {
+	
+		e.preventDefault();
+		findOnPage();
+	});
+	$('.js-reset').on("click", function(e) {
+		e.preventDefault();
+		resetSearch();
+	});
+}
+
+//----search
+function writeTxt(term) {	
+	$('#jq-search-term').val(term);
+	
+}
+
+function indexElements(element) {
+	try {
+		var offset = 1; //get index-1 start instead of index-0
+		for(var i=0; i< $(element).length; i++) {		
+			$(element+':eq('+i+')').attr("jdex",(i+offset) );
+		}
+	}
+	catch(e) {
+		//indexer failed
+	}	
+}
+ 
+
+//jq-search-term
+/*
+function listenMic() {
+	if (annyang) {
+	  var commands = {
+		'Text *term': writeTxt,
+		'Find': findOnPage
+		}
+	};
+	//annyang.setLanguage('fi');	
+	  annyang.addCommands(commands);
+	  annyang.start();
+	
+}
+*/

@@ -1,7 +1,8 @@
 //--imports
 @import "_grid";
+@import "_voice-search";
 
-$max-w: 600px;
+$max-w: 850px;
 $padding: 15px;
 $img-folder: "../images/";
 $border-color: #666;
@@ -45,7 +46,7 @@ ul.nav {
 		padding: 0;
 		float: left;
 		display: block;
-		width: 20%;
+		width: 16.6%;
 		text-align: center;
 		
 		a {
@@ -80,12 +81,12 @@ h3 {
 
 .block--tall {
 	background-color: #aaadde;
-	min-height: 500px;
+	//min-height: 500px;
 }
 
 .block--medium {
 	background-color: #decfaa;	
-	min-height: 220px;
+	//min-height: 220px;
 }
 /*
 .col {

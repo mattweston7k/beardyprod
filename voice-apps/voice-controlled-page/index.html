@@ -18,6 +18,7 @@
 		<div class="col span_12_of_12">
 			
 			<ul class="nav nav--top">
+				<li><a href="#">Home</a></li>
 				<li><a href="#">Art</a></li>
 				<li><a href="#">Politics</a></li>
 				<li><a href="#">Health</a></li>
@@ -32,13 +33,21 @@
 			<button id="jq-stop-listen" class="btn btn--voice">Voice control <b>off</b></button>			
 		</div>	
 		<div class="col span_5_of_12">
-			<button id="jq-change-lang">language</button>			
+			<button id="jq-change-lang">language</button>	
+			<input id="jq-search-term" type="text" value="block" />	
+			<a class="js-btn js-simulate" href="#">jq find on page</a>		
+			<a class="js-btn js-reset" href="#">jq reset</a>		
 		</div>
-	</div>
+	</div>	
 	<div class="section group">
 		<div class="col span_4_of_12">
 			<h3>Commands:</h3>
-			scrolls to element
+			<p>
+			'Text *term': writeTxt,<br />
+			'Find': findOnPage,<br />
+			'reset' : resetSearch,<br />
+			'voice off' : stopMic
+			</p>
 		</div>
 		<div class="col span_8_of_12">
 			<p><b>[en]</b><br />
@@ -49,7 +58,7 @@
 			</p>
 		</div>	
 	</div>
-	<div class="section group">
+	<div class="section group main">
 		<div class="col span_4_of_12">
 			<div class="block block--normal">
 				<h2>normal block header</h2>
@@ -112,6 +121,13 @@
 			</div>	
 		</div>
 	</div>
+	
+	<!-- create js controls -->
+	<div class="js-panel">
+		found <span class="js-find-count" id="js-find-count"></span> result(s)
+	</div>
+	
+	
 </div>
 
 
