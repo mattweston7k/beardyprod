@@ -164,6 +164,8 @@ jQuery.fn.highlight = function (str, className) {
 }; 
 
 function findOnPage() {
+	//reset
+	resetSearch();
 	
 	var stxt =  $('#jq-search-term').val().toString(); //"to save and improve";  //searched text
 	$(".main *").highlight(stxt, "jq-focused");
@@ -173,6 +175,7 @@ function findOnPage() {
 			$(this).append('<div class="jq-index">' + $(this).attr("jdex") +'</div>');
 		});		
 	}	
+	
 	//fadeIn
 	$('.js-panel').fadeIn(500);
 	$('#js-find-count').text(
