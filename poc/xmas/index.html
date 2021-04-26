@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>     <html class="no-js ie ie8 ie7 lte9 lte8" lang="en">      <![endif]-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Card demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="css/video.css" />
+  
+ </head> 
+
+<body class="no-script">
+<div class="wrapper">
+	<div class="section group">
+		<div class="col span_4_of_12">
+			<h3>add some clothes</h3>
+			<div id="jq-actions" class="cmd cmd--list">
+				<a class="btn" data-svg-image="overlay-kilt.svg" href="#">add kilt</a>
+				<a class="btn" data-svg-image="overlay-camo.svg" href="#">add camo</a>
+				<a class="btn" data-svg-image="overlay-hat.svg" href="#">add santa hat</a>
+				<a class="btn" data-svg-image="overlay-mr-t.svg" href="#">add Mr. T, fool!</a>
+			</div>
+			
+			
+		</div>		
+		<div class="col span_4_of_12">			
+			<h2>camera feed</h2>
+			
+			<!--	<img src="images/test-face.png" /> -->
+				<video autoplay></video>
+				
+			
+			<button id="snapshot">Take snapshot</button>
+			  <a class="btn-save btn">save as picture</a>
+			  
+		</div>
+	</div>
+	<div class="section group">
+		<div class="col span_12_of_12">			
+			
+			
+			<div id="jq-description" class="txt txt--shadow">
+				
+			</div>
+			
+			<div class="cutout">
+				<!-- <img src="images/test-img.png" /> -->
+				<canvas id="drawing"></canvas>
+			</div>
+			
+		
+			
+			
+		</div>
+	</div>
+</div>
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+		document.write(unescape("%3Cscript src='scripts/vendor/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>	
+	
+	<script type="text/javascript" src="scripts/video.js"></script>	
+	
+	
+ </body>
+ </html>

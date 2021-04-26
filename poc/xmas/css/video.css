@@ -1,0 +1,153 @@
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.span_12_of_12 {
+  width: 100%; }
+
+.span_11_of_12 {
+  width: 91.53%; }
+
+.span_10_of_12 {
+  width: 83.06%; }
+
+.span_9_of_12 {
+  width: 74.6%; }
+
+.span_8_of_12 {
+  width: 66.13%; }
+
+.span_7_of_12 {
+  width: 57.66%; }
+
+.span_6_of_12 {
+  width: 49.2%; }
+
+.span_5_of_12 {
+  width: 40.73%; }
+
+.span_4_of_12 {
+  width: 32.26%; }
+
+.span_3_of_12 {
+  width: 23.8%; }
+
+.span_2_of_12 {
+  width: 15.33%; }
+
+.span_1_of_12 {
+  width: 6.866%; }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%; } }
+@media only screen and (max-width: 480px) {
+  .span_12_of_12 {
+    width: 100%; }
+
+  .span_11_of_12 {
+    width: 100%; }
+
+  .span_10_of_12 {
+    width: 100%; }
+
+  .span_9_of_12 {
+    width: 100%; }
+
+  .span_8_of_12 {
+    width: 100%; }
+
+  .span_7_of_12 {
+    width: 100%; }
+
+  .span_6_of_12 {
+    width: 100%; }
+
+  .span_5_of_12 {
+    width: 100%; }
+
+  .span_4_of_12 {
+    width: 100%; }
+
+  .span_3_of_12 {
+    width: 100%; }
+
+  .span_2_of_12 {
+    width: 100%; }
+
+  .span_1_of_12 {
+    width: 100%; } }
+body {
+  font-family: Arial;
+  background-color: #144f0c; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 670px;
+  padding: 15px;
+  border: solid 1px #666;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+  box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+  background-color: #fff; }
+
+.txt--center {
+  text-align: center; }
+
+.txt {
+  font-weight: bold; }
+
+.txt--shadow {
+  text-shadow: 2px 2px 1px rgba(144, 150, 150, 0.82); }
+
+img {
+  max-width: 100%; }
+
+video {
+  width: 100%; }
+
+.btn {
+  display: block;
+  border: solid 1px #ccc;
+  padding: 5 15px;
+  border-radius: 5px;
+  background-color: #eee;
+  text-align: center;
+  margin: 10px 0; }
+
+.cutout {
+  position: relative;
+  min-height: 400px; }
+  .cutout img {
+    position: absolute;
+    display: none; }
+  .cutout canvas {
+    border: solid 1px #666;
+    -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+    -moz-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+    box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55); }
+
+.cmd--list a {
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: bold; }

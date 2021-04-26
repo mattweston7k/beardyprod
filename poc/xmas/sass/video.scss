@@ -1,0 +1,83 @@
+//--imports
+@import "_grid";
+
+$max-w: 700px;
+$padding: 15px;
+$img-folder: "../images/";
+
+
+@mixin shadow {
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+	-moz-box-shadow:    0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+	box-shadow:         0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+}
+@mixin animated-obj($duration) {
+	-webkit-transition: all $duration ease-in-out;
+	transition: all $duration ease-in-out;
+}
+
+body {
+	font-family: Arial;
+	background-color: #144f0c;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: $max-w - $padding*2;
+	padding: $padding;
+	border: solid 1px #666;
+	@include shadow;
+	background-color: #fff;
+}
+
+.txt--center {
+	text-align: center;
+}
+
+.txt {
+	font-weight: bold;
+}
+.txt--shadow {
+	text-shadow: 2px 2px 1px rgba(144, 150, 150, 0.82);
+}
+
+img {
+	max-width: 100%;
+}
+//----
+video {	
+	width: 100%;	
+}
+.btn {
+	display: block;
+	border: solid 1px #ccc;
+	padding: 5 15px;
+	border-radius: 5px;
+	background-color: #eee;
+	text-align: center;
+	margin: 10px 0;
+}
+.cutout {
+	position: relative;
+	min-height: 400px;
+	img {
+		position: absolute;
+		display: none;
+	}
+	canvas {
+		//margin: 100px 0 0 20px;
+		border: solid 1px #666;
+		@include shadow;
+	}
+}
+
+.cmd--list {
+	a {
+		text-decoration: none;
+		//background-color: #2b2b2b;
+		//color: #fff;		
+		font-size: 12px;
+		text-align: center;	
+		color: #333;
+		font-weight: bold;
+	}
+}	
