@@ -45,7 +45,7 @@ function videoLogic() {
 	var c_content = canvas.getContext("2d");
 	
 	var source = new Image();
-	source.src = '../images/santa.svg';
+	source.src = '/../images/santa.svg';
 	source.width = '200';
 	source.height = '200';	
 
