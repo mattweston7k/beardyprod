@@ -16,7 +16,7 @@ function jqActions() {
 		
 	//----overlay
 		var overlay1 = new Image();
-		overlay1.src = '../images/' + $(this).attr('data-svg-image');
+		overlay1.src = '../xmas/images/' + $(this).attr('data-svg-image');
 		overlay1.width = '200';
 		overlay1.height = '200';		
 		canvas.getContext("2d").drawImage(overlay1, 0, 0, canvas.width, canvas.height);
@@ -45,7 +45,7 @@ function videoLogic() {
 	var c_content = canvas.getContext("2d");
 	
 	var source = new Image();
-	source.src = '/../images/santa.svg';
+	source.src = '../xmas/images/santa.svg';
 	source.width = '200';
 	source.height = '200';	
 
