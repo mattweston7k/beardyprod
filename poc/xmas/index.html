@@ -17,39 +17,58 @@
 <body class="no-script">
 <div class="wrapper">
 	<div class="section group">
-		<div class="col span_4_of_12">
-			<h3>add some clothes</h3>
-			<div id="jq-actions" class="cmd cmd--list">
+	<!--
+		<div class="col span_3_of_12 content--center">			
+  
+		</div>
+	-->
+		<div class="col span_7_of_12">			
+			<div class="inner--wrap content--center">
+				<h3>camera feed</h3>
+				<button id="camera" class="float-left block">Camera On</button>
+				<button id="cameraoff" class="float-right block">Camera Off</button>
+				<div class="clear v-sep"></div>
+				
+				
+				<div class="content--center">
+					<video autoplay></video>
+				</div>
+				<button id="snapshot" class="block object--center">Take snapshot</button>
+			</div>
+		</div>
+				
+		
+		<div class="col span_2_of_12"></div>
+		
+		<div class="col span_3_of_12">
+			
+			<div id="jq-actions" class="cmd cmd--list toggled">
+				<h3>add some clothes</h3>
 				<a class="btn" data-svg-image="overlay-kilt.svg" href="#">add kilt</a>
 				<a class="btn" data-svg-image="overlay-camo.svg" href="#">add camo</a>
 				<a class="btn" data-svg-image="overlay-hat.svg" href="#">add santa hat</a>
 				<a class="btn" data-svg-image="overlay-mr-t.svg" href="#">add Mr. T, fool!</a>
 			</div>
-			
-			
-		</div>		
-		<div class="col span_3_of_12">
 		</div>
-		<div class="col span_5_of_12">			
-			<h2>camera feed</h2>
-
-			<video autoplay></video>			
-			
-			<button id="camera">Camera On</button>
-			<button id="cameraoff">Camera Off</button> <br /><br /><button id="snapshot">Take snapshot</button>
-			  <a class="btn-save btn">save as picture</a>
-			  
-		</div>
+		
 	</div>
 	<div class="section group">
-		<div class="col span_12_of_12">			
+		<div class="col span_9_of_12">			
 			<div id="jq-description" class="txt txt--shadow">				
 			</div>
 			
 			<div class="cutout">
 				<!-- <img src="images/test-img.png" /> -->
 				<canvas id="drawing"></canvas>
+				 
 			</div>
+		</div>
+		<div class="col span_3_of_12">		
+			<a class="btn-save block btn">save as picture</a>	
+			<div class="v-sep"></div>
+			<button id="clear" class="block">Clear picture</button>
+			
+			
 		</div>
 	</div>
 </div>

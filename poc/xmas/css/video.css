@@ -107,7 +107,8 @@ body {
   -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
   -moz-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
   box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 0; }
 
 .txt--center {
   text-align: center; }
@@ -122,7 +123,8 @@ img {
   max-width: 100%; }
 
 video {
-  width: 100%; }
+  width: 100%;
+  border: solid 1px #ccc; }
 
 .btn {
   display: block;
@@ -132,6 +134,9 @@ video {
   background-color: #eee;
   text-align: center;
   margin: 10px 0; }
+
+.btn-save {
+  margin: 0; }
 
 .cutout {
   position: relative;
@@ -156,3 +161,31 @@ video {
   font-weight: bold;
   padding: 10px;
   margin-bottom: 15px; }
+
+.float-right {
+  float: right;
+  display: block; }
+
+.float-left {
+  float: left; }
+
+.block {
+  display: block; }
+
+.clear {
+  clear: both; }
+
+.v-sep {
+  height: 15px; }
+
+.content--center {
+  text-align: center; }
+
+.inner--wrap {
+  padding: 0 20px; }
+
+.object--center {
+  margin: 0 auto; }
+
+.toggled {
+  display: none; }

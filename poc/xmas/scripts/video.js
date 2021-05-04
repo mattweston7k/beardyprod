@@ -29,6 +29,14 @@ function jqActions() {
 	$('#cameraoff').on("click", function(e) {
 		stopCamera();
 	});
+	$('#clear').on("click", function(e) {
+		try {
+			$('#jq-actions').fadeOut(300);
+			canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+		}
+		catch(e) {
+		}
+	});
 }
 
 function startCamera() {
@@ -96,7 +104,8 @@ function videoLogic() {
 	  
 	  canvas.getContext("2d").drawImage(video, 200, 153, 76, 64); //video capture
 	  canvas.getContext("2d").drawImage(source, 0, 0, canvas.width, canvas.height); //draw full image
-	  
+	 
+	$('#jq-actions').fadeIn(400);
 	 //draw overlay 
 	  //canvas.getContext("2d").drawImage(overlay1, 0, 0, canvas.width, canvas.height);
 	 

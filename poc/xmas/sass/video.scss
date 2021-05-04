@@ -27,6 +27,7 @@ body {
 	border: solid 1px #666;
 	@include shadow;
 	background-color: #fff;
+	padding-top: 0;
 }
 
 .txt--center {
@@ -45,7 +46,8 @@ img {
 }
 //----
 video {	
-	width: 100%;	
+	width: 100%;
+	border: solid 1px #ccc;
 }
 .btn {
 	display: block;
@@ -54,8 +56,12 @@ video {
 	border-radius: 5px;
 	background-color: #eee;
 	text-align: center;
-	margin: 10px 0;
+	margin: 10px 0;	
 }
+
+.btn-save {
+		margin: 0;
+	}
 .cutout {
 	position: relative;
 	min-height: 400px;
@@ -83,3 +89,36 @@ video {
 		margin-bottom: 15px;
 	}
 }	
+
+.float-right {
+	float: right;
+	display: block;
+}
+.float-left {
+	float: left;
+}
+.block {
+	display: block;
+}
+.clear {
+	clear: both;
+}
+
+.v-sep {
+	height: 15px;
+}
+
+.content--center {
+	text-align: center;
+}
+.inner--wrap {
+	padding: 0 20px;
+}
+
+.object--center {
+	margin: 0 auto;
+}
+
+.toggled {
+	display: none;
+}
