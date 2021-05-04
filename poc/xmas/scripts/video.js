@@ -22,8 +22,43 @@ function jqActions() {
 		canvas.getContext("2d").drawImage(overlay1, 0, 0, canvas.width, canvas.height);
 
 	});
+	
+	$('#camera').on("click", function(e) {
+		startCamera();
+	});
+	$('#cameraoff').on("click", function(e) {
+		stopCamera();
+	});
 }
 
+function startCamera() {
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+	var constraints = {audio: false, video: true};
+	var video = document.querySelector("video");
+
+	function successCallback(stream){
+	  window.stream = stream; // stream available to console
+	  if (window.URL) {
+		video.src = window.URL.createObjectURL(stream);
+	  } else {
+		video.src = stream;
+	  }
+	}
+
+	function errorCallback(error){
+	  console.log("navigator.getUserMedia error: ", error);
+	}
+
+	navigator.getUserMedia(constraints, successCallback, errorCallback);	
+}
+function stopCamera() {
+	try {
+		stream.stop();
+		}
+		catch(e) {		
+		}
+}
 
 function videoLogic() {
 /*
@@ -73,25 +108,7 @@ function videoLogic() {
 	  //c_content.drawImage(source,0,0);
 	}
 
-	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-	var constraints = {audio: false, video: true};
-	var video = document.querySelector("video");
-
-	function successCallback(stream){
-	  window.stream = stream; // stream available to console
-	  if (window.URL) {
-		video.src = window.URL.createObjectURL(stream);
-	  } else {
-		video.src = stream;
-	  }
-	}
-
-	function errorCallback(error){
-	  console.log("navigator.getUserMedia error: ", error);
-	}
-
-	navigator.getUserMedia(constraints, successCallback, errorCallback);	
+	
 }
 
 function downloadCanvas(link, canvasId, filename) {
