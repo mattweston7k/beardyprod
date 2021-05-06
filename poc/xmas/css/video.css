@@ -139,8 +139,7 @@ video {
   margin: 0; }
 
 .cutout {
-  position: relative;
-  min-height: 400px; }
+  position: relative; }
   .cutout img {
     position: absolute;
     display: none; }
@@ -148,7 +147,8 @@ video {
     border: solid 1px #666;
     -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
     -moz-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
-    box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55); }
+    box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.55);
+    width: 100%; }
 
 #camera {
   margin-right: 15px; }

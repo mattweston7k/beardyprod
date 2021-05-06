@@ -64,7 +64,7 @@ video {
 	}
 .cutout {
 	position: relative;
-	min-height: 400px;
+	//min-height: 400px;
 	img {
 		position: absolute;
 		display: none;
@@ -73,6 +73,7 @@ video {
 		//margin: 100px 0 0 20px;
 		border: solid 1px #666;
 		@include shadow;
+		width: 100%;
 	}
 }
 #camera {
