@@ -1,0 +1,59 @@
+//stats.scss
+//--imports
+@import "_grid";
+
+$max-w: 700px;
+$padding: 15px;
+$img-folder: "../images/";
+
+body {
+	font-family: Arial;
+	font-size: 13px;
+}
+
+.table--stats {
+	border: solid 1px #ccc;
+	th {
+		text-align: left;
+		padding: 10px;
+	}
+	td {
+		vertical-align: top;
+		padding: 10px;
+		border-top: solid 1px #666;
+	}
+}
+
+.status {
+	text-align: center;
+	color: #fff;
+}
+.status--won {
+	background-color: #1ca210;	
+}
+
+.status--lost {
+	background-color: #a2101e;
+}
+.status--Away {
+	background-color: #c71270;
+}
+.status--Home {
+	background-color: #1252c7;
+}
+.center {
+	text-align: center;	
+}
+/*
+canvas {
+	width: 100px;
+	height: 100px;
+}
+*/
+$pie-size: 100px;
+
+.pie {
+	width: $pie-size !important;
+	height: $pie-size / 2 !important;
+	display: block;
+}

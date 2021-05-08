@@ -74,12 +74,12 @@ var d = ''
 		
 			$(
 			'<tr class="">'+'<td>'+bstat[x].date+'</td>'+
-				   '<td class="status status--'+bstat[x].game+'">'+bstat[x].game+'</td>'+
-				   '<td>'+bstat[x].team+'</td>'+
-				   '<td class="status status--'+bstat[x].result+'">'+bstat[x].result+'</td>'+
-				   '<td class="center">'+bstat[x].scoreplus+'</td>'+
-				   '<td class="center">'+bstat[x].scoreminus+'</td>'+
-				   '<td class="center percent item-'+x+'">'+Math.round(bstat[x].scoreplus / max *100)+'%</td>'+
+				'<td class="status status--' +bstat[x].game+ '">' +bstat[x].game+'</td>' +
+				'<td>' +bstat[x].team+'</td>' +
+				'<td class="status status--'+bstat[x].result+'">' +bstat[x].result+'</td>' +
+				'<td class="center">'+bstat[x].scoreplus+'</td>'+
+				'<td class="center">'+bstat[x].scoreminus+'</td>'+
+				'<td class="center percent item-'+x+'">'+Math.round((bstat[x].scoreplus - bstat[x].scoreminus)/ max *100)+'%</td>'+				   
 			'</tr>'
 			).appendTo($('.table--stats'));
 			
@@ -89,15 +89,16 @@ var d = ''
 			var tg = "canvas-"+x;
 			var c;
 			
-			if (bstat[x].scoreplus < 21) {
-				c = "#a21010";				
+			if (bstat[x].scoreplus < 21) { //lost
+				c = "#a21010";								
+				p = Math.round((bstat[x].scoreplus - bstat[x].scoreminus)/ max *100*-1);	
+				makePie(p, 100-p,c,tg);				
 			}
 			else {
 				c = "#1ca210";
-				//p = p-bstat[x].scoreminus;
+				p = Math.round((bstat[x].scoreplus - bstat[x].scoreminus)/ max *100);				
+				makePie(p, 100-p,c,tg);
 			}
-			
-			makePie(p, 100-p,c,tg);
 			
 		}
 	
