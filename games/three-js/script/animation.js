@@ -96,7 +96,7 @@ cube.castShadow = true;
 	sphere.position.y = 4;
 	sphere.position.z = 0;
 sphere.castShadow = true;		
-	scene.add(sphere);
+	//scene.add(sphere);
 	
 //spotlight
 var spotLight = new THREE.SpotLight( 0xffffff );
@@ -157,7 +157,14 @@ function render() {
 		
 	hemi.intensity = controls.lightBright;
 	
-	requestAnimationFrame(render); //wtf does this even do?!
+	requestAnimationFrame(render); //This will create a loop that causes the renderer to draw the scene 60 times per second
 	renderer.render(scene, camera);
 	stats.update();
 }
+
+
+$('#create').on("click", function() {
+	scene.add(sphere);
+	$(this).remove();
+	$('.dg.ac').fadeIn(300);
+});
