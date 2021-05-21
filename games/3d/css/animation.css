@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+  font-size: 13px; }
+
+.js-stats {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  /*
+  width: 80px;
+  padding: 10px;
+  border: solid 1px #f00;
+  background-color: #fff;*/
+  font-weight: bold;
+  overflow: hidden;
+  border: solid 2px #999;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  font-size: 11px; }
+
+.js-toggled {
+  display: none; }
+
+canvas {
+  background-color: #000; }
