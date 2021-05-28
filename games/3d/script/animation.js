@@ -7,7 +7,7 @@ $(function () {
 //define global vars
 var stats = initStats();
 var camera, scene, renderer, cube, sphere, controls;
-var hemi, whiteball;
+var hemi, whiteball, v_random;
 
 function initStats() {
 	var stats = new Stats();
@@ -63,17 +63,19 @@ renderer.shadowMapEnabled = true;
 	scene.add(axes);
 	
 //1) plane object	
-	var planeGeometry = new THREE.PlaneGeometry(140,40,1,1);
+	//var planeGeometry = new THREE.PlaneGeometry(140,40,1,1);
+	
+	var planeGeometry = new THREE.PlaneGeometry(140,60,1,1);
 	/*
 	var planeMaterial = new THREE.MeshLambertMaterial({color: 0x1f5b14});	 //0xcccccc});	
 	var plane = new THREE.Mesh(planeGeometry,planeMaterial);
 	*/
 	//var grass = THREE.ImageUtils.loadTexture( 'images/grass.jpg' );
-	var pmat = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture( 'images/grass.jpg' ) } );
-	
+	var pmat = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture( 'images/grass.jpg' ) } );	
 	plane = new THREE.Mesh(planeGeometry,pmat);
 	
 	plane.rotation.x=- 0.5*Math.PI;
+	//plane.rotation.x = 29.9;
 	plane.position.set(10,0,0);
 	/*plane.position.x = 10;
 	plane.position.y = 0;
@@ -85,11 +87,16 @@ renderer.shadowMapEnabled = true;
 
 //-------------
 // white ball
+//calculate random location
+var v_min = 0;
+var v_max = 45;
+v_random = Math.floor(Math.random() * v_max) + v_min;
+
 	var sg = new THREE.SphereGeometry(3,20,20);	
 	var texture = THREE.ImageUtils.loadTexture( 'images/texture-1.jpg' );
 	var smat = new THREE.MeshLambertMaterial( { map: texture } );
 	whiteball = new THREE.Mesh(sg,smat);
-	whiteball.position.set(25,4, 0);
+	whiteball.position.set(v_random,4, 0);
 	scene.add(whiteball);
 	whiteball.castShadow = true;
 	
@@ -107,11 +114,16 @@ cube.castShadow = true;
 */
 //3) sphere object	
 	var sphereGeometry = new THREE.SphereGeometry(4,20,20); //SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+	/*
 	var sphereMaterial = new THREE.MeshLambertMaterial( //sphere material
 							{color: 0x4f4311
 								//,wireframe: true //true
 							});
 	sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+	*/
+	var pmat = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture( 'images/wood.jpg' ) } );	
+	sphere = new THREE.Mesh(sphereGeometry,pmat);
+	
 	sphere.position.x = -20;
 	sphere.position.y = 4;
 	sphere.position.z = 0;
@@ -188,10 +200,10 @@ function render() {
 	step+= controls.bouncingSpeed; //0.03; //speed
 	sphere.position.x = 2*step; //20+( 10*(Math.cos(step)));
 
-var maxp = 18;
+var maxp = v_random-5;
 	
 	sphere.rotation.y = 0.4*step;
-	sphere.rotation.x = 150;	
+	sphere.rotation.x = -90;	
 // common
 
 if ( sphere.position.x > maxp ) { 
@@ -222,11 +234,13 @@ if ( sphere.position.x > 5 && sphere.position.x < maxp ) { // apply bias
 	
 	stats.update();
 	
-	//get x location:
-	$('.js-stats span').text(
+	//get x location:	
+	$('.js-stats .item-1 span').text(
+		Math.round(whiteball.position.x)
+	);
+	$('.js-stats .item-2 span').text(
 		Math.round(sphere.position.x)
 	);
-	
 	
 	
 	
