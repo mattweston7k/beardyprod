@@ -1,8 +1,9 @@
 
 
 var bstat = [
-	{ "date": "October 27, 2014", "week": "week 4", "team": "Melham muppets (Woodlesford?)", "result": "lost", "scoreplus": 4, "scoreminus": 21},
-	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's (Barnsley)", "result": "lost", "scoreplus": 5, "scoreminus": 21}
+	{ "date": "October 27, 2014", "week": "week 4", "team": "Melham muppets", "result": "lost", "scoreplus": 4, "scoreminus": 21},
+	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's (Barnsley)", "result": "lost", "scoreplus": 5, "scoreminus": 21},
+	{ "date": "November 24, 2014", "week": "week 8", "team": "Hawks", "result": "lost", "scoreplus": 10, "scoreminus": 21}
 ];
 
 //variables
