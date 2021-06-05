@@ -1,10 +1,11 @@
 
 
 var bstat = [
-	{ "date": "October 27, 2014", "week": "week 4", "team": "Melham muppets", "result": "lost", "scoreplus": 4, "scoreminus": 21},
+	{ "date": "October 27, 2014", "week": "week 4", "team": "Meltham muppets", "result": "lost", "scoreplus": 4, "scoreminus": 21},
 	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's (Barnsley)", "result": "lost", "scoreplus": 5, "scoreminus": 21},
 	{ "date": "November 24, 2014", "week": "week 8", "team": "Hawks", "result": "lost", "scoreplus": 10, "scoreminus": 21},
-	{ "date": "December 1, 2014", "week": "week 9", "team": "Melham muppets", "result": "lost", "scoreplus": 11, "scoreminus": 21}
+	{ "date": "December 1, 2014", "week": "week 9", "team": "Meltham muppets", "result": "lost", "scoreplus": 11, "scoreminus": 21},
+	{ "date": "December 15, 2014", "week": "week 11", "team": "Hawks", "result": "lost", "scoreplus": 3, "scoreminus": 21}
 ];
 
 //variables
@@ -25,8 +26,7 @@ function getStats() {
 var d = ''
 
 	$('#jq-description').append(
-		'<table cellpadding="0" cellspacing="0" class="table--stats"><tr class="jq-th"><th>Date</th><th>Week nro</th><th>Team</th><th>Result</th><th>Score forward</th><th>Score against</th>'+ 
-		//'<table cellpadding="0" cellspacing="0" class="table--stats"><tr class="jq-th"><th>Date</th><th>Home / Away</th><th>Team</th><th>Result</th><th>Score forward</th><th>Score against</th>'+ 
+		'<table cellpadding="0" cellspacing="0" class="table--stats"><tr class="jq-th"><th>Date</th><th>Week nro</th><th>Team</th><th>Result</th><th>Score forward</th><th>Score against</th>'+ 		
 		'<th>win/lose %</th>'+
 		'</tr>'+'</table>'
 	);
@@ -45,18 +45,7 @@ var d = ''
 			'</tr>'
 			).appendTo($('.table--stats'));
 			
-/*
-			$(
-			'<tr class="">'+'<td>'+bstat[x].date+'</td>'+
-				'<td class="status status--' +bstat[x].game+ '">' +bstat[x].game+'</td>' +
-				'<td>' +bstat[x].team+'</td>' +
-				'<td class="status status--'+bstat[x].result+'">' +bstat[x].result+'</td>' +
-				'<td class="center">'+bstat[x].scoreplus+'</td>'+
-				'<td class="center">'+bstat[x].scoreminus+'</td>'+
-				'<td class="center percent item-'+x+'">'+Math.round((bstat[x].scoreplus - bstat[x].scoreminus)/ max *100)+'%</td>'+				   
-			'</tr>'
-			).appendTo($('.table--stats'));
-*/			
+	
 			$('<canvas class="pie" style="width: 80px; height: 80px" id="canvas-'+x+'">').appendTo($('.item-'+x));
 			
 			var p = Math.round(bstat[x].scoreplus / max *100);
