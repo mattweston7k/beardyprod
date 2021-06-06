@@ -1,22 +1,11 @@
-
-
 var bstat = [
 	{ "date": "October 27, 2014", "week": "week 4", "team": "Meltham muppets", "result": "lost", "scoreplus": 4, "scoreminus": 21},
 	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's (Barnsley)", "result": "lost", "scoreplus": 5, "scoreminus": 21},
 	{ "date": "November 24, 2014", "week": "week 8", "team": "Hawks", "result": "lost", "scoreplus": 10, "scoreminus": 21},
 	{ "date": "December 1, 2014", "week": "week 9", "team": "Meltham muppets", "result": "lost", "scoreplus": 11, "scoreminus": 21},
-	{ "date": "December 15, 2014", "week": "week 11", "team": "Hawks", "result": "lost", "scoreplus": 3, "scoreminus": 21}
+	{ "date": "December 15, 2014", "week": "week 11", "team": "Hawks", "result": "lost", "scoreplus": 3, "scoreminus": 21},
+	{ "date": "January 5, 2015", "week": "week 12", "team": "Pick & mix", "result": "lost", "scoreplus": 13, "scoreminus": 21}
 ];
-
-//variables
-/*
-date
-home/away (game) / week
-team
-opponent
-result
-description
-*/
 
 $(document).ready(function() {
 	getStats();
@@ -62,12 +51,7 @@ var d = ''
 				p = Math.round((bstat[x].scoreplus - bstat[x].scoreminus)/ max *100);				
 				makePie(p, 100-p,c,tg);
 			}
-			//forward - against
-			
-			
 		}
-	
-	//makePie(75,25, "canvas-1");
 }
 
 
