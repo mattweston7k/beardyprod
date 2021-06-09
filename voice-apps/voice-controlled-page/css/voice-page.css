@@ -188,9 +188,14 @@ ul.nav {
     text-align: center; }
     ul.nav li a {
       display: block;
-      border-left: solid 1px #666666;
+      border-left: solid 1px #666;
       padding: 5px 10px;
-      font-size: 13px; }
+      font-size: 13px;
+      text-decoration: none;
+      color: #66f;
+      font-weight: bold; }
+      ul.nav li a:hover {
+        text-decoration: underline; }
     ul.nav li:first-child a {
       border-left: none; }
 
@@ -225,3 +230,50 @@ h3 {
 
 .blurred {
   opacity: 0.2; }
+
+.txt--alt {
+  font-size: 14px; }
+
+.txt--smaller {
+  font-size: 12px; }
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; }
+
+#jq-change-lang {
+  margin-top: 15px; }
+
+.btn-block {
+  display: block; }
+
+.txt--alt {
+  font-size: 14px; }
+
+.txt--smaller {
+  font-size: 12px; }
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; }
+
+#jq-change-lang {
+  margin-top: 15px; }
+
+.btn-block {
+  display: block; }
+
+@media only screen and (max-width: 480px) {
+  .wrapper .nav--top li {
+    width: 33.2%; }
+    .wrapper .nav--top li a {
+      border: none;
+      text-decoration: none; }
+  .wrapper #jq-change-lang, .wrapper #jq-search-term {
+    display: block; }
+  .wrapper #jq-search-term {
+    margin: 10px 0; } }

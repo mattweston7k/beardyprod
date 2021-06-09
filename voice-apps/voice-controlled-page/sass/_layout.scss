@@ -1,0 +1,47 @@
+//layout.scss
+.txt--alt {
+	font-size: 14px;
+}
+.txt--smaller {
+	font-size: 12px;
+}
+label {
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#jq-change-lang {
+	margin-top: 15px;
+}
+.btn-block {
+	display: block;
+}
+
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		.nav--top {
+			li {
+				//float: none;
+				//width: auto;
+				width: 33.2%;
+				a {
+					border: none;
+					text-decoration: none;
+				}
+			}
+		}
+		
+		.js-btn {
+			//clear: both;
+		}
+		#jq-change-lang, #jq-search-term {
+			display: block;
+		}
+		
+		#jq-search-term {
+			margin: 10px 0;
+		}
+	}
+}

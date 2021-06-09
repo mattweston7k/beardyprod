@@ -31,29 +31,36 @@
 		<div class="col span_7_of_12">
 			<button id="jq-listen" class="btn btn--voice">Voice control <b>on</b></button>
 			<button id="jq-stop-listen" class="btn btn--voice">Voice control <b>off</b></button>			
+			
+			<button class="btn-block" id="jq-change-lang">language</button>	
 		</div>	
 		<div class="col span_5_of_12">
-			<button id="jq-change-lang">language</button>	
-			<input id="jq-search-term" type="text" value="block" />	
-			<a class="js-btn js-simulate" href="#">jq find on page</a>		
-			<a class="js-btn js-reset" href="#">jq reset</a>		
+			<label>Search term:</label>
+			<input class="btn-block" id="jq-search-term" type="text" value="block" />	
+			<a class="js-btn js-simulate btn-block" href="#">Search</a>		
+			<a class="js-btn js-reset btn-block" href="#">Reset search</a>
 		</div>
 	</div>	
 	<div class="section group">
-		<div class="col span_4_of_12">
-			<h3>Commands:</h3>
-			<p>
-			'Text *term': writeTxt,<br />
-			'Find': findOnPage,<br />
-			'reset' : resetSearch,<br />
-			'voice off' : stopMic
-			</p>
+		<div class="col span_6_of_12 txt--alt">
+			<h3>Voice commands:</h3>
+			
+			
+			
+			<p><b>'Text'</b> <i>*search term*</i> : writes a search term into the search term box. <br /><span class="txt--smaller">Example: "Text news" will enter value "news" into input field.</span></p>			
+			<p><b>'Find'</b>: finds how many objects with search term are found on the page</p>
+			<p><b>'Reset'</b> : Clear search term (clear input box value)</p>
+			<p><b>'Voice off'</b>: Deactivates voice control</p>
+			
 		</div>
-		<div class="col span_8_of_12">
-			<p><b>[en]</b><br />
+		<div class="col span_6_of_12 txt--alt">
+			<h3>Voice navigation:</h3>
+			<p><b>'Art'</b>: Navigates to Art section</p>
+		
+			<p><b>[sections: english]</b><br />
 				home, art, politics, health, weather, news
 			</p>
-			<p><b>[fi]</b><br />
+			<p><b>[sections: finnish]</b><br />
 				koti, taide, politiikka, terveys, sää, uutiset
 			</p>
 		</div>	

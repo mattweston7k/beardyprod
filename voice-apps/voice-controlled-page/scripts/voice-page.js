@@ -167,20 +167,22 @@ function findOnPage() {
 	//reset
 	resetSearch();
 	
-	var stxt =  $('#jq-search-term').val().toString(); //"to save and improve";  //searched text
-	$(".main *").highlight(stxt, "jq-focused");
-	if ( $('.jq-focused').length > 1 ) {
-		indexElements('.jq-focused');		
-		$('.jq-focused').each(function () {
-			$(this).append('<div class="jq-index">' + $(this).attr("jdex") +'</div>');
-		});		
+	if ($('#jq-search-term').val().length > 0) {	
+		var stxt =  $('#jq-search-term').val().toString(); //"to save and improve";  //searched text
+		$(".main *").highlight(stxt, "jq-focused");
+		if ( $('.jq-focused').length > 1 ) {
+			indexElements('.jq-focused');		
+			$('.jq-focused').each(function () {
+				$(this).append('<div class="jq-index">' + $(this).attr("jdex") +'</div>');
+			});		
+		}	
+		
+		//fadeIn
+		$('.js-panel').fadeIn(500);
+		$('#js-find-count').text(
+			$('.jq-focused').size()
+		);
 	}	
-	
-	//fadeIn
-	$('.js-panel').fadeIn(500);
-	$('#js-find-count').text(
-		$('.jq-focused').size()
-	);	
 }
 
 function resetSearch() {
