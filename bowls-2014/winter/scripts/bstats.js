@@ -1,10 +1,14 @@
 var bstat = [
 	{ "date": "October 27, 2014", "week": "week 4", "team": "Meltham muppets", "result": "lost", "scoreplus": 4, "scoreminus": 21},
-	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's (Barnsley)", "result": "lost", "scoreplus": 5, "scoreminus": 21},
+	{ "date": "November 3, 2014", "week": "week 5", "team": "Spinky's", "result": "lost", "scoreplus": 5, "scoreminus": 21},
 	{ "date": "November 24, 2014", "week": "week 8", "team": "Hawks", "result": "lost", "scoreplus": 10, "scoreminus": 21},
 	{ "date": "December 1, 2014", "week": "week 9", "team": "Meltham muppets", "result": "lost", "scoreplus": 11, "scoreminus": 21},
 	{ "date": "December 15, 2014", "week": "week 11", "team": "Hawks", "result": "lost", "scoreplus": 3, "scoreminus": 21},
-	{ "date": "January 5, 2015", "week": "week 12", "team": "Pick & mix", "result": "lost", "scoreplus": 13, "scoreminus": 21}
+	{ "date": "January 5, 2015", "week": "week 12", "team": "Pick & mix", "result": "lost", "scoreplus": 13, "scoreminus": 21},
+	{ "date": "January 19, 2015", "week": "week 14", "team": "Meltham muppets", "result": "lost", "scoreplus": 7, "scoreminus": 21},
+	{ "date": "January 26, 2015", "week": "week 15", "team": "Spinky's", "result": "lost", "scoreplus": 13, "scoreminus": 21},
+	{ "date": "February 9, 2015", "week": "week 17", "team": "Pick & mix", "result": "lost", "scoreplus": 13, "scoreminus": 21},
+	{ "date": "February 16, 2015", "week": "week 18", "team": "Hawks", "result": "lost", "scoreplus": 7, "scoreminus": 21}
 ];
 
 $(document).ready(function() {
