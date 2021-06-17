@@ -1,0 +1,15 @@
+//import partials
+@import "partials/variables";
+@import "partials/grid";
+@import "partials/mixins";
+@import "partials/buttons";
+@import "partials/typography";
+
+//import modules
+@import "modules/dynamic-objects";
+@import "modules/helper-classes";
+
+//generate sprites (not in use currently)
+@import "compass/utilities/sprites";
+@import "sprites/icons/*.png";
+@include all-icons-sprites;

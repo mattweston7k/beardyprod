@@ -1,0 +1,380 @@
+/* line 1, ../sass/partials/_grid.scss */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+/* line 6, ../sass/partials/_grid.scss */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+/* line 11, ../sass/partials/_grid.scss */
+.col:first-child {
+  margin-left: 0; }
+
+/* line 14, ../sass/partials/_grid.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+/* line 18, ../sass/partials/_grid.scss */
+.group:after {
+  clear: both; }
+
+/* line 22, ../sass/partials/_grid.scss */
+.row {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+  /* line 26, ../sass/partials/_grid.scss */
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+  /* line 30, ../sass/partials/_grid.scss */
+  .row:after {
+    clear: both; }
+
+/* line 36, ../sass/partials/_grid.scss */
+.span_12-12 {
+  width: 100%; }
+
+/* line 39, ../sass/partials/_grid.scss */
+.span_11-12 {
+  width: 91.53%; }
+
+/* line 42, ../sass/partials/_grid.scss */
+.span_10-12 {
+  width: 83.06%; }
+
+/* line 45, ../sass/partials/_grid.scss */
+.span_9-12 {
+  width: 74.6%; }
+
+/* line 48, ../sass/partials/_grid.scss */
+.span_8-12 {
+  width: 66.13%; }
+
+/* line 51, ../sass/partials/_grid.scss */
+.span_7-12 {
+  width: 57.66%; }
+
+/* line 54, ../sass/partials/_grid.scss */
+.span_6-12 {
+  width: 49.2%; }
+
+/* line 57, ../sass/partials/_grid.scss */
+.span_5-12 {
+  width: 40.73%; }
+
+/* line 60, ../sass/partials/_grid.scss */
+.span_4-12 {
+  width: 32.26%; }
+
+/* line 63, ../sass/partials/_grid.scss */
+.span_3-12 {
+  width: 23.8%; }
+
+/* line 66, ../sass/partials/_grid.scss */
+.span_2-12 {
+  width: 15.33%; }
+
+/* line 69, ../sass/partials/_grid.scss */
+.span_1-12 {
+  width: 6.866%; }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  /* line 74, ../sass/partials/_grid.scss */
+  .col {
+    margin: 1% 0 1% 0%; } }
+@media only screen and (max-width: 480px) {
+  /* line 79, ../sass/partials/_grid.scss */
+  .section .col {
+    width: 100%; } }
+/* line 50, ../sass/partials/_mixins.scss */
+body {
+  background-color: #eee; }
+  /* line 54, ../sass/partials/_mixins.scss */
+  body .wrap {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 1.5%;
+    max-width: 980px; }
+
+/* line 64, ../sass/partials/_mixins.scss */
+.icons-sprite, .icons-icon-1, .icons-icon-2, .icons-icon-3 {
+  width: 50px;
+  height: 50px; }
+
+/* line 69, ../sass/partials/_mixins.scss */
+fieldset {
+  position: relative; }
+
+/* line 73, ../sass/partials/_mixins.scss */
+.txt__small {
+  font-size: 70%;
+  display: block;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 5px; }
+
+/* line 1, ../sass/partials/_buttons.scss */
+.btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px #333;
+  background-color: #eee; }
+
+/* line 18, ../sass/partials/_buttons.scss */
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+/* line 22, ../sass/partials/_buttons.scss */
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent; }
+
+/* line 32, ../sass/partials/_buttons.scss */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%; }
+  /* line 35, ../sass/partials/_buttons.scss */
+  input[type=range]:focus {
+    outline: none; }
+  /* line 38, ../sass/partials/_buttons.scss */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 16px;
+    width: 26px;
+    border-radius: 3px;
+    background: #a3b8e8;
+    cursor: pointer; }
+  /* line 43, ../sass/partials/_buttons.scss */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 16px;
+    width: 26px;
+    border-radius: 3px;
+    background: #a3b8e8;
+    cursor: pointer; }
+  /* line 46, ../sass/partials/_buttons.scss */
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 16px;
+    width: 26px;
+    border-radius: 3px;
+    background: #a3b8e8;
+    cursor: pointer; }
+  /* line 53, ../sass/partials/_buttons.scss */
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3882ce;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101; }
+  /* line 56, ../sass/partials/_buttons.scss */
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3882ce;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101; }
+  /* line 59, ../sass/partials/_buttons.scss */
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3882ce;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101; }
+  /* line 64, ../sass/partials/_buttons.scss */
+  input[type=range].locked {
+    opacity: 0.1; }
+  /* line 73, ../sass/partials/_buttons.scss */
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  /* line 79, ../sass/partials/_buttons.scss */
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  /* line 85, ../sass/partials/_buttons.scss */
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9; }
+  /* line 88, ../sass/partials/_buttons.scss */
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd; }
+  @media only screen and (min-width: 480px) {
+    /* line 94, ../sass/partials/_buttons.scss */
+    input[type=range].vertical {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      width: 200px; } }
+
+@media only screen and (min-width: 480px) {
+  /* line 101, ../sass/partials/_buttons.scss */
+  .wrap__vertical-btn {
+    min-height: 240px;
+    position: relative; }
+    /* line 104, ../sass/partials/_buttons.scss */
+    .wrap__vertical-btn .vertical {
+      position: absolute;
+      top: 120px;
+      left: -90px; } }
+/* line 116, ../sass/partials/_buttons.scss */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd; }
+
+/* line 133, ../sass/partials/_buttons.scss */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd; }
+
+/* line 137, ../sass/partials/_buttons.scss */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3882ce;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101; }
+
+/*
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+*/
+@media only screen and (max-width: 480px) {
+  /* line 165, ../sass/partials/_buttons.scss */
+  input[type=range] {
+    width: 90%;
+    margin: 0 5%; } }
+/* line 1, ../sass/partials/_typography.scss */
+body {
+  font-family: Arial;
+  font-size: 1rem; }
+
+/* line 5, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 1.6rem; }
+
+/* line 8, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 1.4rem; }
+
+/* line 11, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 1.2rem; }
+
+/* line 14, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 1rem;
+  color: #1b3ea2; }
+
+/* line 3, ../sass/modules/_dynamic-objects.scss */
+.js-enabled__submit {
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  opacity: 1.0; }
+
+/* line 9, ../sass/modules/_dynamic-objects.scss */
+canvas {
+  background-color: #aaa;
+  width: 100%;
+  min-height: 150px; }
+
+/* line 16, ../sass/modules/_dynamic-objects.scss */
+.bg {
+  position: relative; }
+  /* line 19, ../sass/modules/_dynamic-objects.scss */
+  .bg img {
+    width: auto;
+    max-width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+/* line 34, ../sass/modules/_dynamic-objects.scss */
+.answer__close {
+  background-color: #eaeeaa; }
+
+/* line 37, ../sass/modules/_dynamic-objects.scss */
+.answer__correct {
+  background-color: #aea; }
+
+/* line 40, ../sass/modules/_dynamic-objects.scss */
+.debug__element {
+  display: none; }
+
+/* line 1, ../sass/modules/_helper-classes.scss */
+.center-block {
+  margin: 0 auto;
+  display: block; }
+
+/* line 5, ../sass/modules/_helper-classes.scss */
+.center-txt {
+  text-align: center; }
+
+/* line 64, sprites/icons/*.png */
+.icons-sprite, .icons-icon-1, .icons-icon-2, .icons-icon-3 {
+  background-image: url('../assets/images/sprites/icons-sb22505f1aa.png');
+  background-repeat: no-repeat; }
+
+/* line 84, ../../../../../Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-icon-1 {
+  background-position: 0 0; }
+
+/* line 84, ../../../../../Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-icon-2 {
+  background-position: 0 -50px; }
+
+/* line 84, ../../../../../Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-icon-3 {
+  background-position: 0 -100px; }

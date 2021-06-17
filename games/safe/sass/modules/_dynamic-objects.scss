@@ -1,0 +1,42 @@
+// .js logic
+
+.js-enabled__submit {
+   @include animate-opacity(2s);
+   opacity: 1.0;
+}
+
+
+canvas {
+   background-color: #aaa;
+   width: 100%;
+   min-height: 150px;
+}
+
+
+   .bg {
+      position: relative;
+
+      img {
+         width: auto;
+         max-width: 100%;
+
+         @include css-animate(all, 0.5s);
+
+         &.active {
+
+         }
+      }
+      .dynamic-bg {
+
+      }
+   }
+
+.answer__close {
+   background-color: #eaeeaa;
+}
+.answer__correct {
+   background-color: #aea;
+}
+.debug__element {
+   display: none;
+}
