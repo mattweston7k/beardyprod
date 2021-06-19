@@ -1,0 +1,80 @@
+//mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin animate-opacity($seconds) {
+   -webkit-transition: opacity $seconds ease-in-out;
+   -moz-transition: opacity $seconds ease-in-out;
+   -o-transition: opacity $seconds ease-in-out;
+   transition: opacity $seconds ease-in-out;
+}
+
+@mixin slider-thumb($thumb-bg-color) {
+   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+   border: 1px solid #000000;
+   height: 16px;
+   width: 26px;
+   border-radius: 3px;
+   background: $thumb-bg-color;
+   cursor: pointer;
+}
+@mixin slider-track($track-bg-color) {
+   width: 100%;
+   height: 8.4px;
+   cursor: pointer;
+   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+   background: $track-bg-color;
+   border-radius: 1.3px;
+   border: 0.2px solid #010101;
+}
+@mixin rotate($degrees) {
+   -webkit-transform:rotate($degrees);
+   -moz-transform:rotate($degrees);
+   -o-transform:rotate($degrees);
+   -ms-transform:rotate($degrees);
+   transform:rotate($degrees);
+}
+
+@mixin css-animate($method, $seconds) {
+   -webkit-transition: $method $seconds ease-in-out;
+   -moz-transition: $method $seconds ease-in-out;
+   -o-transition: $method $seconds ease-in-out;
+   transition: $method $seconds ease-in-out;
+}
+
+
+body {
+   background-color: #eee;
+
+
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 1.5%;
+    max-width: 980px;
+  }
+
+}
+
+.icons-sprite {
+  width: $icon-size;
+  height: $icon-size;
+}
+
+fieldset {
+   position: relative;
+}
+
+.txt__small {
+   font-size: 70%;
+   display: block;
+   float: right;
+   position: absolute;
+   right: 10px;
+   top: 5px;
+}

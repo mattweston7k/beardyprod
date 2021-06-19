@@ -1,0 +1,169 @@
+.btn {
+   @include border-radius(3px);
+   border: solid 1px #333;
+   background-color: #eee;
+
+}
+
+//----override:
+// input[type=range] {
+//   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+//   width: 100%; /* Specific width is required for Firefox. */
+// }
+//
+// input[type=range]::-webkit-slider-thumb {
+//   -webkit-appearance: none;
+// }
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+//-----styling the thumb for slider:
+
+input[type=range] {
+   -webkit-appearance: none; // Hides the slider so that custom slider can be made
+   width: 100%; // Specific width is required for Firefox.
+   &:focus {
+      outline: none; // Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though.
+   }
+   &::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     margin-top: -4px; // You need to specify a margin in Chrome, but in Firefox and IE it is automatic
+     @include slider-thumb($color-input);
+   }
+   &::-moz-range-thumb {
+      @include slider-thumb($color-input);
+   }
+   &::-ms-thumb {
+      @include slider-thumb($color-input);
+   }
+
+//---needs more attention:
+// https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+   &::-webkit-slider-runnable-track {
+      @include slider-track(#3882ce);
+   }
+   &::-moz-range-track {
+      @include slider-track(#3882ce);
+   }
+   &::-ms-track {
+      @include slider-track(#3882ce);
+   }
+
+
+   &.locked {
+      opacity: 0.1;
+   }
+
+
+   // &:focus::-webkit-slider-runnable-track {
+   //   background: #0f0;
+   // }
+
+   &::-ms-fill-lower {
+     background: #2a6495;
+     border: 0.2px solid #010101;
+     border-radius: 2.6px;
+     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+   }
+   &::-ms-fill-upper {
+     background: #3071a9;
+     border: 0.2px solid #010101;
+     border-radius: 2.6px;
+     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+   }
+   &:focus::-ms-fill-lower {
+     background: #3071a9;
+   }
+   &:focus::-ms-fill-upper {
+     background: #367ebd;
+   }
+
+//----vertical
+@media only screen and (min-width: 480px) {
+      &.vertical {
+         @include rotate(-90deg);
+         width: $vertical-height;
+      }
+   }
+}
+@media only screen and (min-width: 480px) {
+   .wrap__vertical-btn {
+      min-height: $vertical-height + 2*$obj-padding;
+      position: relative;
+      .vertical {
+         position: absolute;
+         top: $vertical-height/2 + $obj-padding;
+         left: -$vertical-height/2 + $obj-padding/2;
+      }
+   }
+
+}
+
+
+
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+
+//----styling the track
+
+// input[type=range]::-webkit-slider-runnable-track {
+//   width: 100%;
+//   height: 8.4px;
+//   cursor: pointer;
+//   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+//   background: #3071a9;
+//   border-radius: 1.3px;
+//   border: 0.2px solid #010101;
+// }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+
+   @include slider-track(#3882ce);
+}
+
+/*
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+*/
+
+//mobile
+@media only screen and (max-width: 480px) {
+   input[type=range] {
+      width: 90%;
+      margin: 0 5%;
+   }
+}

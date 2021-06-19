@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>POC app</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="../css/main.css" />
+ </head>
+
+<body>
+
+<div class="wrap">
+
+   <div class="section group">
+      <div class="col span_1-12">
+         <h4>[Function elements]</h4>
+         <div class="wrap__vertical-btn">
+            <input type="range" value="0" class="btn__range vertical" />
+         </div>
+      </div>
+
+      <div class="col span_8-12">
+         <h4 class="center-txt">[Main content]</h4>
+
+         <div class="bg">
+            <div class="dynamic-bg">
+               <img class="center-block" src="../assets/images/disc.png" />
+            </div>
+         </div>
+
+         <div class="wrap--canvas">
+            <!--
+            <canvas></canvas>
+         -->
+         </div>
+      </div>
+      <div class="col span_3-12">
+
+         <div class="functions">
+            <div class="debug__element">
+               <h4 class="center-txt">[Sweet val]</h4>
+               <p class="center-txt" id="sweet_val"></p>
+            </div>
+
+            <h4 class="center-txt">[Slider val]</h4>
+            <p class="center-txt" id="slider_val"></p>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="section group">
+      <div class="col span_12-12">
+         <h3>Coundown timer here?</h3>
+      </div>
+   </div>
+</div>
+
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<!--
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+-->
+	<script>
+	/* if (typeof jQuery == 'undefined') { */
+		document.write(unescape("%3Cscript src='../assets/scripts/vendor/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	/* }  */
+	</script>
+
+   <script type="text/javascript" src="../assets/scripts/main.js"></script>
+
+
+ </body>
+ </html>

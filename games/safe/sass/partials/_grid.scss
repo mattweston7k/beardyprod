@@ -1,0 +1,84 @@
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+.group:after {
+  clear: both; }
+
+//row (test use)
+.row {
+   clear: both;
+   padding: 0px;
+   margin: 0px;
+      &:before, &:after {
+         content: "";
+         display: table;
+      }
+      &:after {
+         clear: both;
+      }
+}
+
+
+.span_12-12 {
+  width: 100%; }
+
+.span_11-12 {
+  width: 91.53%; }
+
+.span_10-12 {
+  width: 83.06%; }
+
+.span_9-12 {
+  width: 74.6%; }
+
+.span_8-12 {
+  width: 66.13%; }
+
+.span_7-12 {
+  width: 57.66%; }
+
+.span_6-12 {
+  width: 49.2%; }
+
+.span_5-12 {
+  width: 40.73%; }
+
+.span_4-12 {
+  width: 32.26%; }
+
+.span_3-12 {
+  width: 23.8%; }
+
+.span_2-12 {
+  width: 15.33%; }
+
+.span_1-12 {
+  width: 6.866%; }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%; }
+}
+@media only screen and (max-width: 480px) {
+   .section {
+      .col {
+         width: 100%;
+      }
+   }
+
+}
