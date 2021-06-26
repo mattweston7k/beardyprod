@@ -1,0 +1,7 @@
+#canvas {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  min-height: 150px;
+  background: rgba(0,0,0,0.75);
+}
