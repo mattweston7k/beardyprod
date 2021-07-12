@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Puzzle POC</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+   <div id="slides__container" class="container__wrap">
+      <div class="shader">
+
+      </div>
+      <button id="play" class="btn btn--play">Play</button>
+
+      <div class="dialog">
+         <div class="dialog__wrap">
+         <h3>Well done</h3>
+         <p>Congratulations, you completed the sliding puzzle in <span class="score__val"></span> moves!</p>
+         <p>Please enter your name:</p>
+            <input type="text" id="usr_name" class="usr-input" />
+         <p>
+            <button class="btn" id="dialog__close">Save</button>
+         </p>
+         </div>
+      </div>
+   </div>
+   <div class="container__wrap">
+      <button id="help" class="btn btn--help">?</button>
+
+      <button id="reset" class="btn block btn--reset">Play again</button>
+   </div>
+
+   <div class="help__window">
+      <img src="assets/images/complete.jpg" />
+   </div>
+
+   <div id="scorelist" class="score">
+      <div class="score__title text-center">Your high scores</div>
+      <div class="clear">&nbsp;</div>
+      <ol class="list">
+         <li class="row__scoretable">
+            <div class="score__field field--name field--header float--left">Name</div><div class="score__field field--header float--left text-center">Moves</div><div class="score__field field--header float--right">Date</div>
+         </li>
+
+      </ol>
+      <div class="clear">&nbsp;</div>
+      <button class="btn btn--expand center-block js-toggled">Show all</button>
+      <button class="btn center-block" id="clear">Delete high scores</button>
+   </div>
+
+   <!-- <button class="btn" id="load">Load</button> -->
+   <button class="btn center-block" id="read">Show high scores</button>
+
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script type="text/javascript" src="assets/scripts/vendor/jquery-1.11.2.min.js"></script>
+   <script type="text/javascript" src="assets/scripts/filter-words.js"></script>
+   <script type="text/javascript" src="assets/scripts/scoring.js"></script>
+
+   <script type="text/javascript" src="assets/scripts/slide-grid.js"></script>
+   <script type="text/javascript" src="assets/scripts/slider-v1-6.js"></script>
+
+</body>
+</html>
